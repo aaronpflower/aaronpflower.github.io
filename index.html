@@ -8,14 +8,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" type="text/css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
         <link rel="stylesheet" href="./styles.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     </head>
     <body>
-        <div id='welcome' class="row welcome middle-xs center-xs">
-            <h1 class="col-xs-12 large-text">Aaron Flower</h1>
-            <p class="col-xs-12 small-text">Front End Web Developer</h1>
-            <p class="col-xs-12 small-text">Boulder, Colorado</h1>
-            <div class="col-xs-12">
+        <div id='welcome' class="welcome">
+            <h1 class="text large-text">Aaron Flower</h1>
+            <p class="text small-text">Front End Web Developer</h1>
+            <p class="text small-text">Boulder, Colorado</h1>
+            <div class="svg">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                 <svg id="boulder-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 673.7 319.8" enable-background="new 0 0 673.7 319.8" xml:space="preserve">
@@ -136,11 +136,11 @@
         <main class="row container">
             <div id='left' class="left col-xs-12 col-md-4">
                 <img class="avatar" src="https://avatars3.githubusercontent.com/u/8060269?v=3&s=460">
-                <p class="first medium-text color-light row">Aaron Flower</p>
-                <p class="second small-text title color-light row">Front End Web Developer</p>
-                <p class="third small-text title color-light row">aaronpflower@gmail.com</p>
-                <a class="forth link color-light row" href="#about-me">About Me</a>
-                <a class="fith link color-light row" href="#projects">Projects</a>
+                <p class="text first medium-text color-light row">Aaron Flower</p>
+                <p class="text second small-text title color-light row">Front End Web Developer</p>
+                <p class="text third small-text title color-light row">aaronpflower@gmail.com</p>
+                <a class="text forth link color-light row" href="#about-me">About Me</a>
+                <a class="text fith link color-light row" href="#projects">Projects</a>
                 <a class="sixth" href="resume/Aaron_Flower_Resume.pdf" download="AaronFlowerResume.jpg">
                     <button class="btn">Download Resume</button>
                 </a>
@@ -155,92 +155,114 @@
             </div>
             <div id='right' class="right col-xs-12 col-md-8">
                 <div class="eighth row">
-                    <h1 class="large-text color-dark col-xs-12">Purpose</h1>
+                    <h1 class="text large-text color-dark col-xs-12">Purpose</h1>
                     <div class="line-left col-xs-9"></div>
-                    <p class="small-text color-dark col-xs-12">Seeking a full-time or contract to hire opportunity within a mature organization focused on delivering well designed software products and investing in its people.</p>
+                    <p class="text small-text color-dark col-xs-12">Seeking a full-time or contract to hire opportunity within a mature organization focused on delivering well designed software products and investing in its people.</p>
                 </div>
                 <div class="ninth row">
-                    <h1 id="about-me" class="large-text col-xs-12">About Me</h1>
+                    <h1 id="text about-me" class="large-text col-xs-12">About Me</h1>
                     <div class="line-left col-xs-9"></div>
-                    <p class="small-text color-dark col-xs-12">I’m a Frontend Web Developer currently looking for new opportunities within a mature organization focused on delivering well designed software products and investing in its people.  I have almost two and half years of professional experience within the web development field.  During this time I spent my first 10 Quality Assurance Tester and spent the next year and six months as a Frontend Web Developer working on a variety of client projects in a fast paced environment. Outside of work I enjoy spending time growing knowledge and strengthening my skills in software development.  Not only do I enjoy doing, I enjoy looking back and seeing the benefit of my professional growth it has had, that each month I’m a better developer than I was the previous.</p>
+                    <p class="text small-text color-dark col-xs-12">I’m a Frontend Web Developer currently looking for new opportunities within a mature organization focused on delivering well designed software products and investing in its people.  I have almost two and half years of professional experience within the web development field.  During this time I spent my first 10 Quality Assurance Tester and spent the next year and six months as a Frontend Web Developer working on a variety of client projects in a fast paced environment. Outside of work I enjoy spending time growing knowledge and strengthening my skills in software development.  Not only do I enjoy doing, I enjoy looking back and seeing the benefit of my professional growth it has had, that each month I’m a better developer than I was the previous.</p>
                 </div>
                 <div class="tenth row">
-                    <h1 id="projects" class="large-text col-xs-12">Projects</h1>
+                    <h1 id="text about-me" class="large-text col-xs-12">Technologies</h1>
                     <div class="line-left col-xs-9"></div>
+                    <div class="col-xs-12 col-md-6">
+                        <h2 class="text medium-text">Front End</h2>
+                        <p class="text small-text">HTML, and Jade</p>
+                        <p class="text small-text">Javascript</p>
+                        <p class="text small-text">CSS, LESS, Stylus</p>
+                        <p class="text small-text">Mithril, and React</p>
+                        <p class="text small-text">Redux</p>
+                        <p class="text small-text">Gulp, Webpack</p>
+                        <p class="text small-text">Git, Github</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <h2 class="text medium-text">Back End</h2>
+                        <p class="text small-text">NodeJS, ExpressJS</p>
+                        <p class="text small-text">KeystoneJS, Loopback</p>
+                        <p class="text small-text">MongoDB, PostgreSQL</p>
+                        <p class="text small-text">MailChimp, Sendgrid</p>
+                        <p class="text small-text">Stripe</p>
+                    </div>
                 </div>
                 <div class="eleventh row">
-                    <h2 class="medium-text col-xs-12">Racing Extinction</h2>
-                    <p class="small-text col-xs-12">Racing Extinction website is built on Squarespace using HTML, CSS, and jQuery to tell the story of the documentary Racing Extinction and to challenge users to get involved to help save the earth's endangered species.</p>
-                    <div class="col-xs-12">
-                        <div class="row baseline-xs">
-                            <i class="fa fa-wrench wrench" aria-hidden="true"></i>
-                            <p class="stack">Squarespace, HTML, CSS, jQuery</p>
-                        </div>
-                    </div>
-                    <a class="small-text col-xs-12 project-link" target="_blank" href="http://racingextinction.com">http://racingextinction.com</a>
+                    <h1 id="projects" class="text large-text col-xs-12">Projects</h1>
+                    <div class="line-left col-xs-9"></div>
                 </div>
                 <div class="twelfth row">
-                    <h2 class="medium-text col-xs-12">Human Design</h2>
-                    <p class="small-text col-xs-12">The Human Design’s website is a responsive site built with custom HTML, Stylus and Javascript in order to give user the best experience on any browser size to communicate the vision, values and create brand awareness for the company.</p>
+                    <h2 class="text medium-text col-xs-12">Racing Extinction</h2>
+                    <p class="text small-text col-xs-12">Racing Extinction website is built on Squarespace using HTML, CSS, and jQuery to tell the story of the documentary Racing Extinction and to challenge users to get involved to help save the earth's endangered species.</p>
                     <div class="col-xs-12">
                         <div class="row baseline-xs">
                             <i class="fa fa-wrench wrench" aria-hidden="true"></i>
-                            <p class="stack">HTML, Stylus, Javascript</p>
+                            <p class="text stack">Squarespace, HTML, CSS, jQuery</p>
                         </div>
                     </div>
-                    <a class="small-text col-xs-12 project-link" target="_blank" href="http://humandesign.com">http://humandesign.com</a>
+                    <a class="text small-text col-xs-12 project-link" target="_blank" href="http://racingextinction.com">http://racingextinction.com</a>
                 </div>
                 <div class="thirteenth row">
-                    <h2 class="medium-text col-xs-12">Social Action Machine</h2>
-                    <p class="small-text col-xs-12">Social Action Machine (SAM) website is a landing page for an MVP product focused on creating custom widgets and empowering their use through embeddable JS/HTML scripts. embeddable scripts that generated custom widgets.  These widgets leveraged NodeJS on top of MongoDB to create simple user accounts and store signatures to specific causes. (example: https://socialactionmachine.com/causes)</p>
+                    <h2 class="text medium-text col-xs-12">Human Design</h2>
+                    <p class="text small-text col-xs-12">The Human Design’s website is a responsive site built with custom HTML, Stylus and Javascript in order to give user the best experience on any browser size to communicate the vision, values and create brand awareness for the company.</p>
                     <div class="col-xs-12">
                         <div class="row baseline-xs">
                             <i class="fa fa-wrench wrench" aria-hidden="true"></i>
-                            <p class="stack">HTML, Stylus, Javascript, MongoDB, NodeJS, ExpressJS, MithrilJS</p>
+                            <p class="text text stack">HTML, Stylus, Javascript</p>
                         </div>
                     </div>
-                    <a class="small-text col-xs-12 project-link" target="_blank" href="https://socialactionmachine.com">https://socialactionmachine.com</a>
+                    <a class="text text small-text col-xs-12 project-link" target="_blank" href="http://humandesign.com">http://humandesign.com</a>
                 </div>
                 <div class="fourteenth row">
-                    <h2 class="medium-text col-xs-12">The Ivory Game</h2>
-                    <p class="small-text col-xs-12">The Ivory Game website is a informative site for the Netflix Original Documentary. I focused on developing a responsive layout so that the custom design was visually pleasing across all browser sizes.</p>
+                    <h2 class="text medium-text col-xs-12">Social Action Machine</h2>
+                    <p class="text small-text col-xs-12">Social Action Machine (SAM) website is a landing page for an MVP product focused on creating custom widgets and empowering their use through embeddable JS/HTML scripts. embeddable scripts that generated custom widgets.  These widgets leveraged NodeJS on top of MongoDB to create simple user accounts and store signatures to specific causes. (example: https://socialactionmachine.com/causes)</p>
                     <div class="col-xs-12">
                         <div class="row baseline-xs">
                             <i class="fa fa-wrench wrench" aria-hidden="true"></i>
-                            <p class="stack">Jade, Javascript, and VelocityJS</p>
+                            <p class="text stack">HTML, Stylus, Javascript, MongoDB, NodeJS, ExpressJS, MithrilJS</p>
+                        </div>
+                    </div>
+                    <a class="text small-text col-xs-12 project-link" target="_blank" href="https://socialactionmachine.com">https://socialactionmachine.com</a>
+                </div>
+                <div class="fithteenth row">
+                    <h2 class="text medium-text col-xs-12">The Ivory Game</h2>
+                    <p class="text small-text col-xs-12">The Ivory Game website is a informative site for the Netflix Original Documentary. I focused on developing a responsive layout so that the custom design was visually pleasing across all browser sizes.</p>
+                    <div class="col-xs-12">
+                        <div class="row baseline-xs">
+                            <i class="fa fa-wrench wrench" aria-hidden="true"></i>
+                            <p class="text stack">Jade, Javascript, and VelocityJS</p>
                         </div>
                     </div>
                     <a class="small-text col-xs-12 project-link" target="_blank" href="https://theivorygame.com">https://theivorygame.com</a>
                 </div>
-                <div class="fithteenth row">
-                    <h2 class="medium-text col-xs-12">Verge of Extinction</h2>
-                    <p class="small-text col-xs-12">Verge of Extinction is an informative site enabling users to join a mailing list and make donations.  We used  MailChimp API calls to handle the mailing list and and a server side NodeJS API integration with Stripe.</p>
+                <div class="sixteenth row">
+                    <h2 class="text medium-text col-xs-12">Verge of Extinction</h2>
+                    <p class="text small-text col-xs-12">Verge of Extinction is an informative site enabling users to join a mailing list and make donations.  We used  MailChimp API calls to handle the mailing list and and a server side NodeJS API integration with Stripe.</p>
                     <div class="col-xs-12">
                         <div class="row baseline-xs">
                             <i class="fa fa-wrench wrench" aria-hidden="true"></i>
-                            <p class="stack">Jade, Stylus, Javascript, ExpressJS, NodeJS</p>
+                            <p class="text stack">Jade, Stylus, Javascript, ExpressJS, NodeJS</p>
                         </div>
                     </div>
                     <a class="small-text col-xs-12 project-link" target="_blank" href="http://vergeofextinction.org">http://vergeofextinction.org</a>
                 </div>
-                <div class="sixteenth row">
-                    <h2 class="medium-text col-xs-12">Rayback Collective</h2>
-                    <p class="small-text col-xs-12">The Rayback is Boulder's first food truck park. I contriubted to the private event booking feature using KeystoneJS for the backend</p>
+                <div class="seventeenth row">
+                    <h2 class="text medium-text col-xs-12">Rayback Collective</h2>
+                    <p class="text small-text col-xs-12">The Rayback is Boulder's first food truck park. I contriubted to the private event booking feature using KeystoneJS for the backend</p>
                     <div class="col-xs-12">
                         <div class="row baseline-xs">
                             <i class="fa fa-wrench wrench" aria-hidden="true"></i>
-                            <p class="stack">KeystoneJS, Jade, Stylus, Javascript</p>
+                            <p class="text stack">KeystoneJS, Jade, Stylus, Javascript</p>
                         </div>
                     </div>
-                    <a class="small-text col-xs-12 project-link" target="_blank" href="https://therayback.com/">https://therayback.com/</a>
+                    <a class="text small-text col-xs-12 project-link" target="_blank" href="https://therayback.com/">https://therayback.com/</a>
                 </div>
-                <div class="seventeenth row">
-                    <h2 class="medium-text col-xs-12">Humanwire</h2>
-                    <p class="small-text col-xs-12">This is a in progress re-design/re-write of an existing application (https://www.humanwire.org) to improve the user experience and performance. Worked under the direction of a Sr. Developer and alongside another developer to implement full stack user stories. This was accomplished using Mithril and Redux to support an efficient SPA, and effectively handle state, and Loopback framework for it’s out-of-the-box handling of access control.</p>
+                <div class="eighteenth row">
+                    <h2 class="text medium-text col-xs-12">Humanwire</h2>
+                    <p class="text small-text col-xs-12">This is a in progress re-design/re-write of an existing application (https://www.humanwire.org) to improve the user experience and performance. Worked under the direction of a Sr. Developer and alongside another developer to implement full stack user stories. This was accomplished using Mithril and Redux to support an efficient SPA, and effectively handle state, and Loopback framework for it’s out-of-the-box handling of access control.</p>
                     <div class="col-xs-12">
                         <div class="row baseline-xs">
                             <i class="fa fa-wrench wrench" aria-hidden="true"></i>
-                            <p class="stack">Loopback, Mithril, PostgreSQL, NodeJS, Stylus, Webpack</p>
+                            <p class="text stack">Loopback, Mithril, PostgreSQL, NodeJS, Stylus, Webpack</p>
                         </div>
                     </div>
                 </div>

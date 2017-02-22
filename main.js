@@ -15,28 +15,26 @@ var API = {
     left: function() {
         var children = document.getElementById('left').childNodes
         var childrenArray = [].slice.call(children)
-        this.show(document.getElementById('left'), 4000)
+        this.show(document.getElementById('left'), 3500)
         setTimeout(function() {
             childrenArray.map(function(child) {
                 if (typeof child.classList === 'undefined') { return child }
                 return child.classList.add('visible')
             })
-        }, 5000)
+        }, 4500)
     },
     right: function() {
         var children = document.getElementById('right').childNodes
         var childrenArray = [].slice.call(children)
-        this.show(document.getElementById('right'), 5000)
+        this.show(document.getElementById('right'), 4500)
         setTimeout(function() {
             childrenArray.map(function(child) {
                 if (typeof child.classList === 'undefined') { return child }
                 return child.classList.add('visible')
             })
-        }, 6000)
+        }, 5500)
     }
 }
-
-
 
 window.onload = function () {
     API.welcome()

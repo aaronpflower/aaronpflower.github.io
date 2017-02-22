@@ -2,21 +2,22 @@
 html {
     width: 100%;
     height: 100;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-size: 1.25rem;
 }
 
 svg {
     width: 100%;
 }
+
 body {
     width: 100%;
     height: 100%;
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     margin: 0;
 }
 
@@ -44,13 +45,13 @@ body {
 
 .btn {
     display: inline-block;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Rubik', sans-serif;
     outline: none;
     font-weight: 300;
     font-size: 1rem;
     font-size: 16px;
-    padding: 0 45px;
-    line-height: 55px;
+    padding: 1em;
+    margin: .5em;
     -webkit-border-radius: 45px;
     -moz-border-radius: 45px;
     border-radius: 45px;
@@ -93,26 +94,25 @@ body {
 }
 
 /* Text */
+.text {
+    font-family: 'Rubik', sans-serif;
+    margin: .5em 0;
+    text-decoration: none;
+}
+
 .large-text {
     font-size: 2em;
-    font-family: 'Roboto', sans-serif;
-    margin: .2em 0;
     letter-spacing: .03em;
 }
 
 .medium-text {
     font-size: 1.5em;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    margin: .5em 0 0 0;
     letter-spacing: .05em;
 }
 
 .small-text {
     font-size: .8em;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    margin: .5em 0;
     line-height: 1.5em;
     letter-spacing: .1em;
 }
@@ -124,10 +124,7 @@ body {
 
 .stack {
     font-size: .6em;
-    text-decoration: none;
     color: #f63854;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
     letter-spacing: .2em;
     font-weight: lighter;
 }
@@ -135,9 +132,6 @@ body {
 .link {
     position: relative;
     font-size: .7em;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    margin: .5em 0;
     line-height: 1.5em;
     letter-spacing: .1em;
 }
@@ -164,14 +158,11 @@ body {
 .project-link {
     color: #01ffcf;
     font-size: .7em;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
 }
 
 /* Left side */
 .left {
     opacity: 0;
-    transition: opacity .4s ease-in;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -186,14 +177,13 @@ body {
     -ms-flex-align: center;
     align-items: center;
     background-color: #0b1922;
-    height: 100%;
-    width: 100%;
-    transition-delay: .2s;
+    padding: 1em;
 }
 
 .avatar {
-    width: 12em;
-    height: 12em;
+    width: 11em;
+    height: 11em;
+    margin: .5em 0;
     border-radius: 50%;
     border: 3px solid #01ffcf;
     background: #641475;
@@ -201,14 +191,11 @@ body {
     opacity: 0;
 }
 
-/* RIght*/
+/* Right*/
 .right {
     opacity: 0;
     padding: 1.5em;
     background-color: #fff;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    height: 100%;
 }
 
 .info {
@@ -221,7 +208,12 @@ body {
             flex-direction: column;
 }
 
+/* Welcome */
 .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -231,6 +223,28 @@ body {
     background-color: #fff;
     transition: opacity .4s ease-out;
     opacity: 1;
+}
+
+.svg {
+    width: 50%;
+}
+
+/* Desktop styles*/
+@media only screen and (min-width: 64em) {
+    .container {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+    .left {
+        height: 100%;
+        width: 100%;
+    }
+
+    .right {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
 }
 
 /* Toggle Classes */
@@ -303,17 +317,21 @@ body {
     opacity: 0;
     transition: opacity .4s ease-in;
 }
+.eighteenth {
+    opacity: 0;
+    transition: opacity .4s ease-in;
+}
 
 .visible {
     opacity: 1;
     z-index: 1;
-    transition: opacity .4s ease-in;
+    transition: all .4s ease-in;
 }
 
 .invisible {
     opacity: 0;
     z-index: 0;
-    transition: opacity .4s ease-in;
+    transition: all .4s ease-in;
 }
 
 .first {
@@ -367,7 +385,12 @@ body {
 .seventeenth {
     transition-delay: 1.8s;
 }
+.eighteenth {
+    transition-delay: 1.9s;
+}
 
+
+/* SVG animation */
 #boulder-svg {
 	display: block;
 }
@@ -479,3 +502,4 @@ body {
 		stroke-dashoffset: 100;
 	}
 }
+
