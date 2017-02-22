@@ -104,6 +104,8 @@ body {
     -ms-flex-align: center;
     align-items: center;
     background-color: #0b1922;
+    height: 100%;
+    width: 100%;
 }
 
 .avatar {
@@ -120,6 +122,7 @@ body {
     background-color: #fff;
     overflow-x: hidden;
     overflow-y: scroll;
+    height: 100%;
 }
 
 .link {
