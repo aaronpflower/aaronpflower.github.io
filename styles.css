@@ -15,7 +15,7 @@ body {
     height: 100%;
 }
 
-.container {
+.main-container {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -238,7 +238,7 @@ body {
 
 /* Desktop styles*/
 @media only screen and (min-width: 64em) {
-    .container {
+    .main-container {
         height: 100vh;
         width: 100vw;
         margin: 0;
@@ -251,6 +251,7 @@ body {
     .right {
         overflow-x: hidden;
         overflow-y: scroll;
+        height: 100%;
     }
 }
 
@@ -356,7 +357,7 @@ body {
 
 .invisible {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
     -webkit-transition: all .4s ease-in;
     transition: all .4s ease-in;
 }
