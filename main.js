@@ -31,6 +31,22 @@ var API = {
         var childrenArray = [].slice.call(children)
         this.show(document.getElementById('right'), 4500)
         this.showChildren(childrenArray, 5500)
+    },
+
+    handleSmoothScroll: function(e, destination) {
+        e.preventDefault();
+        window.smoothScroll(destination, 500, null, document.getElementById('right'))
+    },
+
+    scrollToo: function() {
+        var targets = document.querySelectorAll('.target');
+        var targetsArray = [].slice.call(targets)
+
+        targetsArray.map(function(target) {
+            return target.addEventListener('click', function(e) {
+                API.handleSmoothScroll(e, document.getElementById(target.getAttribute("data-destination")))
+            })
+        })
     }
 }
 
@@ -38,4 +54,5 @@ window.onload = function () {
     API.welcome()
     API.left()
     API.right()
+    API.scrollToo()
 }
