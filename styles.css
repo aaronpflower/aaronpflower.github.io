@@ -375,6 +375,12 @@ body {
     transition: opacity .4s ease-in;
 }
 
+.twentyone {
+    opacity: 0;
+    -webkit-transition: opacity .4s ease-in;
+    transition: opacity .4s ease-in;
+}
+
 .visible {
     opacity: 1;
     z-index: 1;
@@ -468,6 +474,11 @@ body {
 .twenty {
     -webkit-transition-delay: 2.1s;
             transition-delay: 2.1s;
+}
+
+.twentyone {
+    -webkit-transition-delay: 2.2s;
+            transition-delay: 2.2s;
 }
 
 
