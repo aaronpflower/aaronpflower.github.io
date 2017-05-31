@@ -357,29 +357,7 @@ body {
     -webkit-transition: opacity .4s ease-in;
     transition: opacity .4s ease-in;
 }
-.eighteenth {
-    opacity: 0;
-    -webkit-transition: opacity .4s ease-in;
-    transition: opacity .4s ease-in;
-}
 
-.ninteenth {
-    opacity: 0;
-    -webkit-transition: opacity .4s ease-in;
-    transition: opacity .4s ease-in;
-}
-
-.twenty {
-    opacity: 0;
-    -webkit-transition: opacity .4s ease-in;
-    transition: opacity .4s ease-in;
-}
-
-.twentyone {
-    opacity: 0;
-    -webkit-transition: opacity .4s ease-in;
-    transition: opacity .4s ease-in;
-}
 
 .visible {
     opacity: 1;
@@ -462,23 +440,6 @@ body {
 .seventeenth {
     -webkit-transition-delay: 1.8s;
             transition-delay: 1.8s;
-}
-.eighteenth {
-    -webkit-transition-delay: 1.9s;
-            transition-delay: 1.9s;
-}
-.ninteenth {
-    -webkit-transition-delay: 2s;
-            transition-delay: 2s;
-}
-.twenty {
-    -webkit-transition-delay: 2.1s;
-            transition-delay: 2.1s;
-}
-
-.twentyone {
-    -webkit-transition-delay: 2.2s;
-            transition-delay: 2.2s;
 }
 
 
