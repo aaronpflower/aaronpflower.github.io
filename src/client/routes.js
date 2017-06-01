@@ -1,5 +1,4 @@
 import 'normalize.css';
-// import 'font-awesome/css/font-awesome.css';
 import styles from './main.less'
 import grid from 'flexboxgrid'
 
@@ -10,12 +9,12 @@ import Home from './containers/home.container'
 import About from './containers/about.container'
 import Projects from './containers/projects.container'
 import Skills from './containers/skills.container'
-import Nav from './containers/nav.container'
+import Header from './containers/header.container'
 
 const Routes = () => (
   <Router>
     <div className={styles.mainWrapper}>
-      <Nav/>
+      <Header/>
       <div className={styles.content}>
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
