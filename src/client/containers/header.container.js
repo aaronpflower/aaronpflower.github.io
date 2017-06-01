@@ -45,9 +45,9 @@ class Header extends Component {
 
     return (
       <header className={styles.header}>
-        <div className={classnames(grid.row, grid.betweenXs, grid.middleXs, styles.basicNav)}>
-          <Link to="/" className={classnames(grid.colXs1, styles.logo)}>AF</Link>
-          <i onClick={this.toggleMenu} className={classnames(icons.fa, icons.faBars, grid.colXs1, styles.mobileBars)}/>
+        <div className={classnames(styles.basicNav)}>
+          <Link to="/" className={classnames(styles.logo)}>AF</Link>
+          <i onClick={this.toggleMenu} className={classnames(icons.fa, icons.faBars, styles.mobileBars)}/>
         </div>
         <CSSTransitionGroup
           transitionName={animation}
@@ -56,8 +56,12 @@ class Header extends Component {
           {nav}
         </CSSTransitionGroup>
         <div className={classnames(styles.social)}>
-          <i className={classnames(icons.fa, icons.faGithubAlt, styles.icons)}/>
-          <i className={classnames(icons.fa, icons.faLinkedinSquare, styles.icons)}/>
+          <a href="https://github.com/aaronpflower" target="_blank">
+            <i className={classnames(icons.fa, icons.faGithubAlt, styles.icons)}/>
+          </a>
+          <a href="https://www.linkedin.com/in/aaron-flower-20748339/" target="_blank">
+            <i className={classnames(icons.fa, icons.faLinkedinSquare, styles.icons)}/>
+          </a>
         </div>
       </header>
     )

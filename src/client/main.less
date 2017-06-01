@@ -1,10 +1,14 @@
+@import './base/varibles.less';
+
 .content {
   padding-top: 60px;
   width: 100%;
-  background: green;
+  background: @white;
+  @media @screen-md {
+    padding: 0px 0px 0px 60px;
+  }
 }
 
 .mainWrapper {
-  display: block;
   width: 100%;
 }
