@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom';
 import Typer from '../components/typer.component';
 import { CSSTransitionGroup } from 'react-transition-group'
-import HomeMain from '../components/home.main';
+import HomeMain from '../components/home.main'
 
 import grid from 'flexboxgrid'
 import styles from './home.styles.less'

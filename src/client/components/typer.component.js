@@ -15,7 +15,9 @@ class Typer extends Component {
     })
     return (
       <div className={styles.container}>
-        <TypeWriter onTypingEnd={this.props.onTypingEnd} typing={1}>{items}</TypeWriter>
+        <div className={styles.content}>
+          <TypeWriter onTypingEnd={this.props.onTypingEnd} typing={1}>{items}</TypeWriter>
+        </div>
       </div>
     )
   }
