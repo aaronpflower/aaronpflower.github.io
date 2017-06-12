@@ -3,10 +3,27 @@ import ReactDOM from 'react-dom';
 import Typer from '../components/typer.component';
 import { CSSTransitionGroup } from 'react-transition-group'
 import HomeMain from '../components/home.main'
+import classnames from 'classnames'
 
 import grid from 'flexboxgrid'
 import styles from './home.styles.less'
+import fonts from '../base/fonts.less'
 import animation from '../base/animation.less'
+
+// https://codepen.io/42EG4M1/pen/bVMzze
+function Loading(props) {
+  return (
+  	<div className={styles.loadingText}>
+  		<span className={styles.loadingTextWords}>L</span>
+  		<span className={styles.loadingTextWords}>O</span>
+  		<span className={styles.loadingTextWords}>A</span>
+  		<span className={styles.loadingTextWords}>D</span>
+  		<span className={styles.loadingTextWords}>I</span>
+  		<span className={styles.loadingTextWords}>N</span>
+  		<span className={styles.loadingTextWords}>G</span>
+  	</div>
+  )
+}
 
 class Home extends Component {
   constructor(props) {
@@ -15,13 +32,16 @@ class Home extends Component {
       index: 0,
       typersData: [
         {
-          data: [ "const Dev = {", "something: function() {", "return 'something'", "}", "}"]
+          data: ["const AaronFlower = {", "occupation: 'Front End Developer'", "}"]
         },
         {
-          data: [ "const Aaron = Object.assign(Object.create(Dev), {","  design: true,", "selfTaught: true", "})"]
+          data: ["AaronFlower.skills = [", "'Javascript', 'HTML5', 'CSS3', 'React', 'Redux', 'Node'", "]"]
         },
         {
-          data: ["{", "design: true,", "selfTaught: true", "}"]
+          data: ["AaronFlower.experince = [","'3 years', 'creating SPAs', 'responsive user interfaces'", "]"]
+        },
+        {
+          data: ["AaronFlower.personaility: [", "'Dedicated', 'Self-motivated'", "]"]
         }
       ]
     }
@@ -37,10 +57,13 @@ class Home extends Component {
   render() {
     let index = this.state.index
     let content
+    let headline
 
     if (Math.abs(this.state.index) === this.state.typersData.length) {
       content = <HomeMain/>
+      headline = null
     } else {
+      headline = <Loading />
       content = this.state.typersData.slice(index, index+1).map((item, i) => {
         return <Typer onTypingEnd={this.onTypingEnd} key={index} data={item.data}/>;
       })
@@ -48,10 +71,11 @@ class Home extends Component {
 
     return (
       <div className={styles.container}>
+        {headline}
         <CSSTransitionGroup
           transitionName={styles}
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={1000}>
+          transitionEnterTimeout={900}
+          transitionLeaveTimeout={900}>
           {content}
         </CSSTransitionGroup>
       </div>
