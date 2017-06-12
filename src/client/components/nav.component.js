@@ -11,6 +11,7 @@ function nav (props) {
       <Link to="/" className={classnames(styles.link, styles.home)}><i className={classnames(icons.fa, icons.faHome, styles.navIcon)}/></Link>
       <Link to="/about" className={classnames(styles.link, styles.male)}><i className={classnames(icons.fa, icons.faMale, styles.navIcon)}/></Link>
       <Link to="/projects" className={classnames(styles.link, styles.code)}><i className={classnames(icons.fa, icons.faCode, styles.navIcon)}/></Link>
+      <Link to="/blog" className={classnames(styles.link, styles.blog)}><i className={classnames(icons.fa, icons.faRss, styles.navIcon)}/></Link>
     </nav>
   )
 }

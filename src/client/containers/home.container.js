@@ -1,9 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom';
-import Typer from '../components/typer.component';
 import { CSSTransitionGroup } from 'react-transition-group'
-import HomeMain from '../components/home.main'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
+
+import Typer from '../components/typer.component';
+import HomeMain from '../components/home.main'
+import mapStateToProps from '../utils/mapStateToProps'
+import { setLoader } from '../actions/actions'
 
 import grid from 'flexboxgrid'
 import styles from './home.styles.less'
@@ -30,6 +34,7 @@ class Home extends Component {
     super(props)
     this.state = {
       index: 0,
+      loaded: false,
       typersData: [
         {
           data: ["const AaronFlower = {", "occupation: 'Front End Developer'", "}"]
@@ -46,6 +51,11 @@ class Home extends Component {
       ]
     }
     this.onTypingEnd = this.onTypingEnd.bind(this)
+    this.handleInitalLoad = this.handleInitalLoad.bind(this)
+  }
+
+  handleInitalLoad() {
+    this.props.dispatch(setLoader())
   }
 
   onTypingEnd() {
@@ -54,12 +64,22 @@ class Home extends Component {
     });
   }
 
+  componentDidUpdate() {
+    if (this.state.loaded === false) {
+      this.setState({
+        loaded: true
+      })
+      this.props.dispatch(setLoader())
+
+    }
+  }
+
   render() {
     let index = this.state.index
     let content
     let headline
 
-    if (Math.abs(this.state.index) === this.state.typersData.length) {
+    if (Math.abs(this.state.index) === this.state.typersData.length || this.props.store.loader.loaded === true) {
       content = <HomeMain/>
       headline = null
     } else {
@@ -83,4 +103,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default connect(mapStateToProps)(Home)
