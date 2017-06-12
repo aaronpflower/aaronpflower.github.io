@@ -7,6 +7,16 @@ html {
     font-size: 1.25rem;
 }
 
+body {
+  background: @white;
+}
+
+a {
+  text-decoration: none;
+  color: @color-primary-3;
+  cursor: pointer;
+}
+
 .mainWrapper {
   width: 100%;
 }
@@ -15,7 +25,9 @@ html {
   display: flex;
   padding-top: 60px;
   width: ~"calc(100% - 60px)";
-  background: @color-primary-2;
+  max-width: 1290px;
+  margin: auto;
+  background: @white;
   overflow: hidden;
   @media @screen-md {
     padding: 0px 0px 0px 60px;

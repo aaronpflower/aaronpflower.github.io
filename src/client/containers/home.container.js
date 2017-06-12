@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import { CSSTransitionGroup } from 'react-transition-group'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
+import { typersData } from '../data'
 
 import Typer from '../components/typer.component';
 import HomeMain from '../components/home.main'
+import Loading from '../components/loading.component'
 import mapStateToProps from '../utils/mapStateToProps'
 import { setLoader } from '../actions/actions'
 
@@ -14,41 +16,13 @@ import styles from './home.styles.less'
 import fonts from '../base/fonts.less'
 import animation from '../base/animation.less'
 
-// https://codepen.io/42EG4M1/pen/bVMzze
-function Loading(props) {
-  return (
-  	<div className={styles.loadingText}>
-  		<span className={styles.loadingTextWords}>L</span>
-  		<span className={styles.loadingTextWords}>O</span>
-  		<span className={styles.loadingTextWords}>A</span>
-  		<span className={styles.loadingTextWords}>D</span>
-  		<span className={styles.loadingTextWords}>I</span>
-  		<span className={styles.loadingTextWords}>N</span>
-  		<span className={styles.loadingTextWords}>G</span>
-  	</div>
-  )
-}
-
 class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
       index: 0,
       loaded: false,
-      typersData: [
-        {
-          data: ["const AaronFlower = {", "occupation: 'Front End Developer'", "}"]
-        },
-        {
-          data: ["AaronFlower.skills = [", "'Javascript', 'HTML5', 'CSS3', 'React', 'Redux', 'Node'", "]"]
-        },
-        {
-          data: ["AaronFlower.experince = [","'3 years', 'creating SPAs', 'responsive user interfaces'", "]"]
-        },
-        {
-          data: ["AaronFlower.personaility: [", "'Dedicated', 'Self-motivated'", "]"]
-        }
-      ]
+      typersData: typersData
     }
     this.onTypingEnd = this.onTypingEnd.bind(this)
     this.handleInitalLoad = this.handleInitalLoad.bind(this)
@@ -65,7 +39,7 @@ class Home extends Component {
   }
 
   componentDidUpdate() {
-    if (this.state.loaded === false) {
+    if (this.state.loaded === false && this.state.index === this.state.typersData.length) {
       this.setState({
         loaded: true
       })

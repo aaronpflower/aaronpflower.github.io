@@ -7,7 +7,6 @@ const initialState = {
 
 module.exports = createReducer(initialState, {
     [LOADED]: (state, action) => {
-        console.log(action)
         if (!action.pending && !action.error) {
             return Object.assign({}, state, {
                 loaded: true

@@ -15,6 +15,7 @@ import Blog from './containers/blog.container'
 import Header from './containers/header.container'
 
 let store = configureStore()
+
 const Routes = () => (
   <Provider store={store}>
     <Router>
