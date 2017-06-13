@@ -7,7 +7,7 @@ const Data = {
       data: ["AaronFlower.skills = [", "'Javascript', 'HTML5', 'CSS3', 'React', 'Redux', 'Node'", "]"]
     },
     {
-      data: ["AaronFlower.experince = [","'3 years', 'creating SPAs', 'responsive user interfaces'", "]"]
+      data: ["AaronFlower.experince = [","'3 years', 'SPAs', 'responsive user interfaces'", "]"]
     },
     {
       data: ["AaronFlower.personaility: [", "'Dedicated', 'Self-motivated'", "]"]

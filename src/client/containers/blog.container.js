@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-
+import styles from './blog.styles.less'
+import fonts from '../base/fonts.less'
 
 class Blog extends Component {
   constructor(props) {
@@ -8,8 +9,10 @@ class Blog extends Component {
 
   render() {
     return (
-      <div>
-        <h2>blog</h2>
+      <div className={styles.container}>
+        <h2 className={styles.mediumText}>Check back soon! Topics may include...</h2>
+        <p className={styles.smallText}>•Javascript development: OOP Protoypes the JS way, Functional Programming</p>
+        <p className={styles.smallText}>•What core CS topics im learning</p>
       </div>
     )
   }

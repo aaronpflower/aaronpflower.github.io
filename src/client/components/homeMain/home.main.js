@@ -7,15 +7,16 @@ import classnames from 'classnames'
 
 function HomeMain (props) {
   return (
-    <div className={grid.row}>
-      <div className={styles.resume}>
-        <p className={fonts.smallText}>Resume</p>
-        <a className={styles.resumeBtn} href={require("../../base/assets/AaronFlowerResume.pdf")} download="AaronFlowerResume.pdf"></a>
-      </div>
+    <div className={classnames(styles.container, grid.row)}>
+      <div className={styles.boulderSvg}></div>
       <div className={grid.colMd6}>
-        <p className={fonts.largeText}>Aaron Flower</p>
-        <p className={fonts.smallText}>Front End Developer</p>
-        <p className={fonts.smallText}>Javascript | HTML5 | CSS3 | React | Redux | Node</p>
+        <p className={fonts.largeText}>Aaron</p>
+        <p className={classnames(styles.lastName, fonts.largeText)}>Flower</p>
+        <p className={classnames(styles.spacer, fonts.smallText)}>Front End Developer</p>
+        <p className={classnames(styles.spacer, fonts.smallText, styles.strengths)}>Javascript <span className={styles.bar}>|</span> HTML5 <span className={styles.bar}>|</span> CSS3 <span className={styles.bar}>|</span> React <span className={styles.bar}>|</span> Redux <span className={styles.bar}>|</span> Node</p>
+        <a href={require("../../base/assets/AaronFlowerResume.pdf")} download="AaronFlowerResume.pdf">
+          <button className={classnames(styles.spacer, styles.btn)}>Resume</button>
+        </a>
       </div>
       <div className={grid.colMd6}>
         <p className={fonts.smallText}>Dedicated and self-motivated Front End Engineer</p>

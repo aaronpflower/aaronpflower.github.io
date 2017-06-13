@@ -45,7 +45,7 @@ class Header extends Component {
     return (
       <header className={styles.header}>
         <div className={classnames(styles.basicNav)}>
-          <Link to="/" className={classnames(styles.logo)}>AF</Link>
+          <Link to="/" className={classnames(styles.logo)}></Link>
           <i onClick={this.toggleMenu} className={classnames(icons.fa, icons.faBars, styles.mobileBars)}/>
         </div>
         <CSSTransitionGroup

@@ -3,7 +3,7 @@
 .header {
   width: 100%;
   position: fixed;
-  background-color: @color-primary-0;
+  background-color: @white;
   top: 0;
   left: 0;
   z-index: 3;
@@ -29,7 +29,7 @@
 
 .mobileBars {
   font-size: 30px !important;
-  color: @white;
+  color: @color-primary-4;
   margin-right: 10px;
   @media @screen-md {
     display: none !important;
@@ -37,15 +37,20 @@
 }
 
 .logo {
-  text-decoration: none;
-  font-size: 30px !important;
   color: @white;
-  margin-left: 10px;
+  margin: 15px 0 0 6px;
+  background-image: url('../base/assets/spaceNeedle.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60px;
+  width: 50px;
+  text-decoration: none;
+  background-size: contain;
 }
 
 .icons {
   font-size: 20px !important;
-  color: @white;
+  color: @color-primary-4;
   margin-bottom: 10px;
 }
 
