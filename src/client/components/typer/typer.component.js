@@ -3,7 +3,7 @@ import TypeWriter from 'react-typewriter'
 import classnames from 'classnames'
 
 import styles from './typer.styles.less'
-import fonts from '../base/fonts.less'
+import fonts from '../../base/fonts.less'
 
 class Typer extends Component {
   constructor(props) {

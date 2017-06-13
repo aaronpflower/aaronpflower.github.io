@@ -5,16 +5,15 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 import { typersData } from '../data'
 
-import Typer from '../components/typer.component';
-import HomeMain from '../components/home.main'
-import Loading from '../components/loading.component'
+import Typer from '../components/typer/typer.component';
+import HomeMain from '../components/homeMain/home.main'
+import Loading from '../components/loader/loading.component'
 import mapStateToProps from '../utils/mapStateToProps'
 import { setLoader } from '../actions/actions'
 
 import grid from 'flexboxgrid'
 import styles from './home.styles.less'
 import fonts from '../base/fonts.less'
-import animation from '../base/animation.less'
 
 class Home extends Component {
   constructor(props) {

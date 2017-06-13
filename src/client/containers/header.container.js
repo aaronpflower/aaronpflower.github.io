@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
 import { CSSTransitionGroup } from 'react-transition-group'
-import Nav from '../components/nav.component'
+import Nav from '../components/nav/nav.component'
 
 import icons from 'font-awesome/css/font-awesome.css'
 import styles from './header.styles.less'
-import animation from '../base/animation.less'
 
 class Header extends Component {
   constructor(props) {
@@ -50,7 +49,7 @@ class Header extends Component {
           <i onClick={this.toggleMenu} className={classnames(icons.fa, icons.faBars, styles.mobileBars)}/>
         </div>
         <CSSTransitionGroup
-          transitionName={animation}
+          transitionName={styles}
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}>
           {nav}

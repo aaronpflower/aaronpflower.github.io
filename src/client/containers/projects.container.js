@@ -1,52 +1,72 @@
 import React, { Component, PropTypes } from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { projectsData } from '../data'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
+import ProjectCard from '../components/projectsCard/projectsCard.component'
+import Modal from '../components/modal/modal.component'
 
 import styles from './projects.styles.less'
 import fonts from '../base/fonts.less'
 
-function ProjectCard(props) {
-    return (
-      <div className={styles.container}>
-        <div className={styles.imgContainer}>
-          <img className={styles.cardImg} src={props.heroImg} />
-          <span className={styles.cardTitle}>{props.title}</span>
-        </div>
-        <div className={styles.cardContent}>
-          <p className={fonts.smallText}>{props.overview}</p>
-        </div>
-        <div className={styles.cardAction}>
-          <a className={fonts.smallText} href={props.link}>Live Url</a>
-        </div>
-      </div>
-    )
-}
-
-class Projects extends Component {
+class ProjectsContainer extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      projectsData: projectsData
+    this.previousLocation = null
+  }
+
+  componentWillUpdate(nextProps) {
+    const { location } = this.props
+    if (
+      nextProps.history.action !== 'POP' &&
+      (!location.state || !location.state.modal)
+    ) {
+      this.previousLocation = this.props.location
     }
   }
 
   render() {
-    let Projects = this.state.projectsData.map((item, i) => {
-      return (
-        <div key={i+1} className={grid.colMd4}>
-          <ProjectCard heroImg={item.heroImg} title={item.name} overview={item.overview} link={item.liveUrl}/>
-        </div>
-      )
-    })
+    const { location } = this.props
+    const isModal = !!(
+      location.state &&
+      location.state.modal &&
+      this.previousLocation !== location // not initial render
+    )
 
     return (
-      <div className={classnames(grid.row, grid.centerXs)}>
-        <h1 className={classnames(grid.colXs12, fonts.mediumText)}>Professional Projects</h1>
-        {Projects}
+      <div>
+        <Switch location={isModal ? this.previousLocation : location}>
+          <Route exact path='/projects' component={Projects}/>
+        </Switch>
+        {isModal ? <Route path='/project/:id' component={Modal} /> : null}
       </div>
     )
   }
 }
 
-export default Projects
+const Projects = () => (
+  <div className={classnames(styles.projects, grid.row, grid.centerXs)}>
+    <h1 className={classnames(grid.colXs12, fonts.mediumText)}>Professional Projects</h1>
+    {projectsData.map(i => (
+      <Link
+        key={i.id}
+        to={{
+          pathname: `/project/${i.id}`,
+          state: { modal: true }
+        }}
+      >
+        <div className={grid.colMd4}>
+          <ProjectCard heroImg={i.heroImg} title={i.title} overview={i.overview} link={i.liveUrl}/>
+        </div>
+      </Link>
+    ))}
+  </div>
+)
+
+const ProjectsGallery = () => (
+  <Router>
+    <Route component={ProjectsContainer} />
+  </Router>
+)
+
+export default ProjectsGallery

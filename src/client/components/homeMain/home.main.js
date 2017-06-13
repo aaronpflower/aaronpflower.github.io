@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './home.main.less'
 import grid from 'flexboxgrid'
-import fonts from '../base/fonts.less'
+import fonts from '../../base/fonts.less'
 
 import classnames from 'classnames'
 
@@ -10,7 +10,7 @@ function HomeMain (props) {
     <div className={grid.row}>
       <div className={styles.resume}>
         <p className={fonts.smallText}>Resume</p>
-        <a className={styles.resumeBtn} href={require("../base/assets/AaronFlowerResume.pdf")} download="AaronFlowerResume.pdf"></a>
+        <a className={styles.resumeBtn} href={require("../../base/assets/AaronFlowerResume.pdf")} download="AaronFlowerResume.pdf"></a>
       </div>
       <div className={grid.colMd6}>
         <p className={fonts.largeText}>Aaron Flower</p>

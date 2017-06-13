@@ -1,4 +1,4 @@
-@import "../base/varibles.less";
+@import "../../base/varibles.less";
 
 .container {
   display: flex;
@@ -8,16 +8,22 @@
   top: 0;
   bottom: 0;
   right: 0px;
-  left: 60px;
+  left: 0px;
   height: 100vh;
   overflow: hidden;
-
+  @media @screen-md {
+    left: 60px;
+  }
 }
 
 .content {
-  padding: .5em;
+  padding: .8em;
   height: 80px;
-  width: 50%;
+  max-width: 600px;
+  width: 90%;
   box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
-  background-color: @color-primary-3;
+  background-color: @color-primary-0;
+  @media @screen-md {
+    width: 50%;
+  }
 }

@@ -3,7 +3,7 @@
 .header {
   width: 100%;
   position: fixed;
-  background: @color-primary-0;
+  background-color: @color-primary-0;
   top: 0;
   left: 0;
   z-index: 3;
@@ -56,4 +56,26 @@
     flex-direction: column;
     align-items: center;
   }
+}
+
+.enter {
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+}
+.enter.enterActive {
+    opacity: 1;
+}
+.leave {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+.leave.leaveActive {
+    opacity: 0.01;
+}
+.appear {
+    opacity: 0.01;
+}
+.appear.appearActive {
+    opacity: 1;
+    transition: opacity .5s ease-in;
 }
