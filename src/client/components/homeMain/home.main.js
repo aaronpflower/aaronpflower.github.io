@@ -8,7 +8,6 @@ import classnames from 'classnames'
 function HomeMain (props) {
   return (
     <div className={classnames(styles.container, grid.row)}>
-      <div className={styles.boulderSvg}></div>
       <div className={grid.colMd6}>
         <p className={fonts.largeText}>Aaron</p>
         <p className={classnames(styles.lastName, fonts.largeText)}>Flower</p>
@@ -18,7 +17,7 @@ function HomeMain (props) {
           <button className={classnames(styles.spacer, styles.btn)}>Resume</button>
         </a>
       </div>
-      <div className={grid.colMd6}>
+      <div className={classnames(styles.objectives, grid.colMd6)}>
         <p className={fonts.smallText}>Dedicated and self-motivated Front End Engineer</p>
         <p className={fonts.smallText}>an endless drive to learn and problem solve</p>
         <p className={fonts.smallText}>and a passion to write efficient Javascript code.</p>

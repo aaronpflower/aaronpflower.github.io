@@ -46,7 +46,9 @@ class ProjectsContainer extends Component {
 
 const Projects = () => (
   <div className={classnames(styles.projects, grid.row, grid.centerXs)}>
-    <h1 className={classnames(grid.colXs12, fonts.mediumText)}>Professional Projects</h1>
+    <div className={styles.hero}>
+      <h1 className={classnames(grid.colXs12, fonts.mediumText)}>Professional Projects</h1>
+    </div>
     {projectsData.map(i => (
       <Link
         key={i.id}

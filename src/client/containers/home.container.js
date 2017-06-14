@@ -15,6 +15,22 @@ import grid from 'flexboxgrid'
 import styles from './home.styles.less'
 import fonts from '../base/fonts.less'
 
+function Computer (props) {
+  return (
+    <div className={styles.wrap}>
+      <div className={styles.comp}>
+        <div className={styles.monitor}>
+          <div className={styles.mid}>
+            <div className={styles.site}></div>
+          </div>
+          <div className={classnames(styles.mid)}></div>
+        </div>
+        <div className={styles.base}></div>
+      </div>
+    </div>
+  )
+}
+
 class Home extends Component {
   constructor(props) {
     super(props)
@@ -51,12 +67,15 @@ class Home extends Component {
     let index = this.state.index
     let content
     let headline
+    let computer
 
     if (Math.abs(this.state.index) === this.state.typersData.length || this.props.store.loader.loaded === true) {
-      content = <HomeMain/>
+      content = <HomeMain />
       headline = null
+      computer = null
     } else {
       headline = <Loading />
+      computer = <Computer />
       content = this.state.typersData.slice(index, index+1).map((item, i) => {
         return <Typer onTypingEnd={this.onTypingEnd} key={index} data={item.data}/>;
       })
@@ -64,11 +83,12 @@ class Home extends Component {
 
     return (
       <div className={styles.container}>
-        {headline}
         <CSSTransitionGroup
           transitionName={styles}
-          transitionEnterTimeout={900}
-          transitionLeaveTimeout={900}>
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}>
+          {headline}
+          {computer}
           {content}
         </CSSTransitionGroup>
       </div>
