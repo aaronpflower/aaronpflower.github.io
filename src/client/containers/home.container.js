@@ -6,6 +6,7 @@ import classnames from 'classnames'
 import { typersData } from '../data'
 
 import Typer from '../components/typer/typer.component';
+import Computer from '../components/computer/computer.component'
 import HomeMain from '../components/homeMain/home.main'
 import Loading from '../components/loader/loading.component'
 import mapStateToProps from '../utils/mapStateToProps'
@@ -14,22 +15,6 @@ import { setLoader } from '../actions/actions'
 import grid from 'flexboxgrid'
 import styles from './home.styles.less'
 import fonts from '../base/fonts.less'
-
-function Computer (props) {
-  return (
-    <div className={styles.wrap}>
-      <div className={styles.comp}>
-        <div className={styles.monitor}>
-          <div className={styles.mid}>
-            <div className={styles.site}></div>
-          </div>
-          <div className={classnames(styles.mid)}></div>
-        </div>
-        <div className={styles.base}></div>
-      </div>
-    </div>
-  )
-}
 
 class Home extends Component {
   constructor(props) {

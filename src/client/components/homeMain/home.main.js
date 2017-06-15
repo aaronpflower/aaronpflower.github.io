@@ -8,7 +8,7 @@ import classnames from 'classnames'
 function HomeMain (props) {
   return (
     <div className={classnames(styles.container, grid.row)}>
-      <div className={grid.colMd6}>
+      <div className={classnames(grid.colMd6)}>
         <p className={fonts.largeText}>Aaron</p>
         <p className={classnames(styles.lastName, fonts.largeText)}>Flower</p>
         <p className={classnames(styles.spacer, fonts.smallText)}>Front End Developer</p>
