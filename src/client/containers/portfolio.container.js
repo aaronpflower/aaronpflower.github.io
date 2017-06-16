@@ -1,15 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import { projectsData } from '../data'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
-import ProjectCard from '../components/projectsCard/projectsCard.component'
 import Modal from '../components/modal/modal.component'
+import ProjectsList from '../components/projectsList/projectsList.component'
 
-import styles from './projects.styles.less'
+import styles from './portfolio.styles.less'
 import fonts from '../base/fonts.less'
 
-class ProjectsContainer extends Component {
+class PortfolioContainer extends Component {
   constructor(props) {
     super(props)
     this.previousLocation = null
@@ -34,9 +33,9 @@ class ProjectsContainer extends Component {
     )
 
     return (
-      <div>
+      <div className={styles.container}>
         <Switch location={isModal ? this.previousLocation : location}>
-          <Route exact path='/projects' component={Projects}/>
+          <Route exact path='/portfolio' render={() => <ProjectsList isModal={isModal} /> }/>
         </Switch>
         {isModal ? <Route path='/project/:id' component={Modal} /> : null}
       </div>
@@ -44,31 +43,10 @@ class ProjectsContainer extends Component {
   }
 }
 
-const Projects = () => (
-  <div className={classnames(styles.projects, grid.row, grid.centerXs)}>
-    <div className={styles.hero}>
-      <h1 className={classnames(grid.colXs12, fonts.mediumText)}>Professional Projects</h1>
-    </div>
-    {projectsData.map(i => (
-      <Link
-        key={i.id}
-        to={{
-          pathname: `/project/${i.id}`,
-          state: { modal: true }
-        }}
-      >
-        <div className={grid.colMd4}>
-          <ProjectCard heroImg={i.heroImg} title={i.title} overview={i.overview} link={i.liveUrl}/>
-        </div>
-      </Link>
-    ))}
-  </div>
-)
-
-const ProjectsGallery = () => (
+const PortfolioGallery = () => (
   <Router>
-    <Route component={ProjectsContainer} />
+    <Route component={PortfolioContainer} />
   </Router>
 )
 
-export default ProjectsGallery
+export default PortfolioGallery

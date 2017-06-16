@@ -70,7 +70,7 @@ class Home extends Component {
       <div className={styles.container}>
         <CSSTransitionGroup
           transitionName={styles}
-          transitionEnterTimeout={500}
+          transitionEnterTimeout={1000}
           transitionLeaveTimeout={500}>
           {headline}
           {computer}

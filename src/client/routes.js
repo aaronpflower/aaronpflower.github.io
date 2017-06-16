@@ -10,7 +10,7 @@ import configureStore from './store/configureStore'
 
 import Home from './containers/home.container'
 import About from './containers/about.container'
-import Projects from './containers/projects.container'
+import Portfolio from './containers/portfolio.container'
 import Blog from './containers/blog.container'
 import Header from './containers/header.container'
 
@@ -24,7 +24,7 @@ const Routes = () => (
         <div className={styles.content}>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
-          <Route path="/projects" component={Projects}/>
+          <Route path="/portfolio" component={Portfolio}/>
           <Route path="/blog" component={Blog}/>
         </div>
       </div>

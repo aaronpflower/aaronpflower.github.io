@@ -1,0 +1,26 @@
+@import '../../base/varibles.less';
+
+.box {
+  // display: flex;
+  width: 250px;
+  // height: 130px;
+  margin: 0 auto;
+  padding: 2px;
+  background-color: @color-primary-0;
+  // Single pixel data uri image http://jsfiddle.net/LPxrT/
+  background-image:
+    url('data:image/gif;base64,R0lGODlhAQABAPAAAAhsov///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+    url('data:image/gif;base64,R0lGODlhAQABAPAAAAhsov///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=='),
+    url('data:image/gif;base64,R0lGODlhAQABAPAAAPX4+v///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+  background-repeat: no-repeat;
+  background-size: 0 2px, 0 0, 100% 100%;
+  background-position: top center, top center, bottom center;
+  opacity: 0;
+}
+
+.content {
+  background: @white;
+  padding: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}

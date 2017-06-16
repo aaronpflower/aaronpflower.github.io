@@ -1,10 +1,6 @@
 @import '../../base/varibles.less';
 
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  height: 550px;
   cursor: pointer;
   color: @color-primary-4;
   position: relative;
@@ -14,10 +10,48 @@
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  &:before {
+    background: rgba(0, 0, 0, 0.2);
+    content: " " !important;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: scale(0.96);
+    width: 100%;
+    z-index: 3;
+    transition: all .3s ease;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+      transform: scale(1.04);
+    }
+    .imgContainer {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .imgContainer {
   position: relative;
+  &:before {
+    background: rgba(0, 0, 0, 0.5);
+    // border-radius: 8px;
+    content: " " !important;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
 }
 
 .cardImg {
@@ -32,7 +66,7 @@
 }
 
 .cardTitle {
-  color: #fff;
+  color: @white;
   text-align: left;
   position: absolute;
   bottom: 0;
@@ -41,6 +75,7 @@
   padding: 24px;
   font-size: 24px;
   font-weight: 300;
+  z-index: 4;
 }
 
 .cardContent {
@@ -53,7 +88,11 @@
   text-align: left;
   position: relative;
   background-color: inherit;
-  border-top: 1px solid rgba(4, 65, 98,0.2);
+  border-top: 1px solid @color-primary-0;
   padding: 16px 24px;
   border-radius: 0 0 2px 2px;
+}
+
+.cardAction a {
+  color: @color-complement-0;
 }

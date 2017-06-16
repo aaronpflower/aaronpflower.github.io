@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from './projectsCard.styles.less'
 import fonts from '../../base/fonts.less'
+import classnames from 'classnames'
 
 function ProjectCard(props) {
+
     return (
       <div className={styles.container}>
         <div className={styles.imgContainer}>

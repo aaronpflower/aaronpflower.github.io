@@ -1,0 +1,90 @@
+@import '../base/varibles.less';
+
+.container {
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: @color-primary-4;
+  z-index: 100;
+}
+
+.box {
+  animation-name: drawBox;
+  animation-duration: 1s;
+  animation-fill-mode:forwards;
+  animation-timing-function: ease-out;
+}
+
+.boxOne {
+  animation-delay: 0s;
+}
+
+.boxTwo {
+  animation-delay: 3s;
+}
+
+.boxThree {
+  animation-delay: 6s;
+}
+
+.boxFour {
+  animation-delay: 9s;
+}
+
+@keyframes drawBox {
+    0% {
+      background-size: 0 2px, 0 0, 100% 100%;
+    }
+    1% {
+      opacity: 1;
+    }
+    10% {
+      background-size: 100% 2px, 100% 0, 100% 100%;
+    }
+    26% {
+      background-size: 100% 2px, 100% 98%, 100% 100%;
+    }
+    49% {
+      background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+    50% {
+      background-size: 100% 2px, 100% 98%, 0 2px;
+    }
+    100% {
+      background-size: 100% 2px, 100% 98%, 0 2px;
+      opacity: 1;
+    }
+}
+
+.line {
+  animation-name: drawLine;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  // transform: rotate(90deg);
+}
+
+.lineOne {
+  animation-delay: 1s;
+}
+
+.lineTwo {
+  animation-delay: 4s;
+}
+
+.lineThree {
+  animation-delay: 7s;
+}
+
+
+@keyframes drawLine {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 250px;
+  }
+}
