@@ -8,6 +8,7 @@ import ProjectsList from '../components/projectsList/projectsList.component'
 import styles from './portfolio.styles.less'
 import fonts from '../base/fonts.less'
 
+// https://codepen.io/jakubtursky/pen/vEwZop
 class PortfolioContainer extends Component {
   constructor(props) {
     super(props)

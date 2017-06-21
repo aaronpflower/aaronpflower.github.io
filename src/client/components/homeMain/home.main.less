@@ -1,29 +1,16 @@
 @import '../../base/varibles.less';
 
 .container {
+  display: flex;
+  height: ~"calc(100vh - 60px)";
   align-items: center;
+  @media @screen-md {
+    height: 100vh;
+  }
 }
 
 .name {
   z-index: 1;
-}
-
-.objectives {
-  z-index: 0;
-  border: 4px solid @color-complement-0;
-  position: relative;
-  padding: 25px;
-  height: 500px;
-  box-shadow: @shadowDark;
-  background: @white;
-}
-
-.objective {
-  margin: 15px 0;
-}
-
-.objective p {
-  margin: 15px 0;
 }
 
 .lastName {
@@ -61,14 +48,14 @@
 }
 
 .btn:hover {
-  border: 1px solid @color-complement-0;
+  border: 1px solid @color-secondary-1-0;
   box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
   outline-color: rgba(4, 65, 98, 0);
   outline-offset: 15px;
-  color: @color-complement-0;
+  color: @color-secondary-1-0;
   text-decoration: none;
 }
 
 .bar {
-  color: @color-complement-0;
+  color: @color-secondary-1-0;
 }

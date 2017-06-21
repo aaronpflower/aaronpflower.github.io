@@ -2,46 +2,31 @@
 
 .container {
   cursor: pointer;
-  color: @color-primary-4;
+  color: @dark;
   position: relative;
   margin: .5rem 0 1rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
   border-radius: 2px;
   background-color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-  &:before {
-    background: rgba(0, 0, 0, 0.2);
-    content: " " !important;
-    height: 100%;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    transform: scale(0.96);
-    width: 100%;
-    z-index: 3;
-    transition: all .3s ease;
-  }
+  transform: scale(1);
+  transition: all .3s ease;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.1), 0 1px 5px 0 rgba(0,0,0,0.1), 0 3px 1px -2px rgba(0,0,0,0.1);
   &:hover {
-    &:before {
-      opacity: 1;
+    transform: translate3d(0,0,0);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    .cardImg {
       transform: scale(1.04);
-    }
-    .imgContainer {
-      &:before {
-        opacity: 1;
-      }
     }
   }
 }
 
 .imgContainer {
   position: relative;
+  transition: all .3s ease;
+  overflow: hidden;
   &:before {
-    background: rgba(0, 0, 0, 0.5);
-    // border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
     content: " " !important;
     height: 100%;
     left: 0;
@@ -55,6 +40,8 @@
 }
 
 .cardImg {
+  transform: scale(1);
+  transition: all .3s ease;
   display: block;
   border-radius: 2px 2px 0 0;
   position: relative;
@@ -88,11 +75,11 @@
   text-align: left;
   position: relative;
   background-color: inherit;
-  border-top: 1px solid @color-primary-0;
+  border-top: 1px solid @dark;
   padding: 16px 24px;
   border-radius: 0 0 2px 2px;
 }
 
 .cardAction a {
-  color: @color-complement-0;
+  color: @color-secondary-2-0;
 }

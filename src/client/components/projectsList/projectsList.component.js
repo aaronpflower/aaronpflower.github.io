@@ -8,14 +8,13 @@ import { projectsData } from '../../data'
 import { Link } from 'react-router-dom'
 
 import ProjectCard from '../projectsCard/projectsCard.component'
+import Header from '../header/header.component'
 
 function ProjectsList(props) {
 
   return (
     <div className={classnames(props.isModal && styles.blur, grid.row, styles.projects)}>
-      <div className={classnames(styles.header, grid.colMd6)}>
-        <h1 className={fonts.largeText}>Projects</h1>
-      </div>
+      <Header class={grid.colXs12} title={'Projects'} />
       {projectsData.map(i => (
         <Link
           className={grid.colMd3}

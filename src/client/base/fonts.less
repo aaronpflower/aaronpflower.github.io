@@ -1,18 +1,46 @@
 @import './varibles.less';
 
+.header {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 7rem;
+  line-height: 6.3rem;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: normal;
+  @media @screen-sm {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: 6px;
+  }
+  @media @screen-md {
+    line-height: 7rem;
+    font-size: 7rem;
+  }
+}
+
+.smallParagraph {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 400;
+  font-size: .85rem;
+}
+
 .largeText {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Condensed', sans-serif;
   line-height: 50px;
   font-size: 60px;
   letter-spacing: .03em;
   font-weight: normal;
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: .02em .02em 0 @color-primary-0;
 }
 
 .mediumText {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.5em;
   line-height: 20px;
   text-decoration: none;
@@ -20,7 +48,7 @@
 }
 
 .smallText {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: .8em;
   line-height: 20px;
   letter-spacing: .05em;
@@ -35,6 +63,7 @@
 }
 
 .boxTitle {
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 15px;
   letter-spacing: .1em;
   line-height: 23px;

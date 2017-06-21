@@ -1,90 +1,119 @@
 @import '../base/varibles.less';
 
 .container {
-  flex-direction: column !important;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  display: flex;
   width: 100%;
-  overflow: hidden;
-  color: @color-primary-4;
-  z-index: 100;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
 }
 
-.box {
-  animation-name: drawBox;
-  animation-duration: 1s;
-  animation-fill-mode:forwards;
-  animation-timing-function: ease-out;
+.listContainer {
+  background: @white;
+  color: @white;
+  padding: 50px 0;
 }
 
-.boxOne {
-  animation-delay: 0s;
-}
-
-.boxTwo {
-  animation-delay: 3s;
-}
-
-.boxThree {
-  animation-delay: 6s;
-}
-
-.boxFour {
-  animation-delay: 9s;
-}
-
-@keyframes drawBox {
-    0% {
-      background-size: 0 2px, 0 0, 100% 100%;
-    }
-    1% {
-      opacity: 1;
-    }
-    10% {
-      background-size: 100% 2px, 100% 0, 100% 100%;
-    }
-    26% {
-      background-size: 100% 2px, 100% 98%, 100% 100%;
-    }
-    49% {
-      background-size: 100% 2px, 100% 98%, 0 2px;
-    }
-    50% {
-      background-size: 100% 2px, 100% 98%, 0 2px;
-    }
-    100% {
-      background-size: 100% 2px, 100% 98%, 0 2px;
-      opacity: 1;
-    }
-}
-
-.line {
-  animation-name: drawLine;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  // transform: rotate(90deg);
-}
-
-.lineOne {
-  animation-delay: 1s;
-}
-
-.lineTwo {
-  animation-delay: 4s;
-}
-
-.lineThree {
-  animation-delay: 7s;
-}
-
-
-@keyframes drawLine {
-  0% {
-    height: 0px;
+.listItem {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: @color-primary-4;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+    transition: background .5s ease-in-out;
   }
-  100% {
-    height: 250px;
+  // @media @screen-sm {
+  //   margin-left: 20px;
+  //   &:nth-child(even) .itemContent::before {
+  //     left: -15px;
+  //     border-width: 8px 16px 8px 0;
+  //     border-color: transparent #F45B69 transparent transparent;
+  //   }
+  // }
+}
+
+
+.itemContent {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: @color-secondary-2-4;
+  box-shadow: @shadowDark;
+  border: 3px solid @color-secondary-2-4;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
   }
+  // @media @screen-sm {
+  //   width: calc(100vw - 91px);
+  //   &:nth-child(even) div {
+  //     left: 45px;
+  //   }
+  // }
+}
+
+
+.listItem:nth-child(odd) .itemContent {
+  left: 45px;
+}
+
+.listItem:nth-child(odd) .itemContent::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent @color-secondary-2-4 transparent transparent;
+}
+
+.listItem:nth-child(even) .itemContent {
+  left: -467px;
+}
+
+.listItem:nth-child(even) .itemContent::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent @color-secondary-2-4;
+}
+
+time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+.inView::after {
+  background: @color-secondary-2-4;
+}
+
+.listItem:nth-child(odd) .itemContent {
+  transform: translate3d(200px, 0, 0);
+}
+
+.listItem:nth-child(even) .itemContent {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.inView {
+  transform: none !important;
+  visibility: visible;
+  opacity: 1;
 }

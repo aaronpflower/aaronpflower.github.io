@@ -1,0 +1,84 @@
+@import '../../base/varibles.less';
+
+.container {
+  display: flex;
+  position: relative;
+  background-color: #000;
+  width: 640px;
+  height: 480px;
+  &:before {
+    background: rgba(0, 0, 0, 0.3);
+    content: " " !important;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    transition: all .3s ease;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+    .arrow {
+      opacity: 1;
+    }
+  }
+}
+
+.container span {
+  display: flex;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  z-index: 100;
+  opacity: 0;
+  cursor: pointer;
+  transition: all .3s ease;
+  transform: translateZ(0);
+}
+
+.leftArrow {
+  background-image: url('../../base/assets/leftArrow.svg');
+  left: 0px;
+}
+
+.rightArrow {
+  right: 0px;
+  background-image: url('../../base/assets/rightArrow.svg');
+}
+
+.img {
+  position: absolute;
+}
+
+.enter {
+    opacity: 0.01;
+    transition: all .5s ease-in;
+}
+.enter.enterActive {
+    opacity: 1;
+}
+.leave {
+    opacity: 1;
+    transition: all .5s ease-in;
+}
+.leave.leaveActive {
+    opacity: 0.01;
+}
+.appear {
+    opacity: 0.01;
+}
+.appear.appearActive {
+    opacity: 1;
+    transition: all .5s ease-in;
+}

@@ -1,21 +1,21 @@
 @import '../base/varibles.less';
 
 .header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   background-color: @white;
   top: 0;
   left: 0;
-  z-index: 30;
+  z-index: 101;
   min-height: 0;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   @media @screen-md {
     display: flex;
-    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+    box-shadow: none;
     flex-direction: column;
     justify-content: space-between;
     width: 60px;
-    height: 100%;
+    height: 100vh;
   }
 }
 
@@ -29,7 +29,7 @@
 
 .mobileBars {
   font-size: 30px !important;
-  color: @color-primary-4;
+  color: @dark;
   margin-right: 10px;
   @media @screen-md {
     display: none !important;
@@ -37,7 +37,6 @@
 }
 
 .logo {
-  color: @white;
   margin: 15px 0 0 6px;
   background-image: url('../base/assets/spaceNeedle.svg');
   background-position: center;
@@ -50,7 +49,7 @@
 
 .icons {
   font-size: 20px !important;
-  color: @color-primary-4;
+  color: @dark;
   margin-bottom: 10px;
 }
 

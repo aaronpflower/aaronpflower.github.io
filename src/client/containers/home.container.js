@@ -49,33 +49,52 @@ class Home extends Component {
   }
 
   render() {
+    // let index = this.state.index
+    // let content = <Typer data={this.state.typersData[0].data}/>;
+    // let headline
+    // let computer = <Computer />
+
+    // if (Math.abs(this.state.index) === this.state.typersData.length || this.props.store.loader.loaded === true) {
+    //   content = <HomeMain />
+    //   headline = null
+    //   computer = null
+    // } else {
+    //   headline = <Loading />
+    //   computer = <Computer />
+    //   content = this.state.typersData.slice(index, index+1).map((item, i) => {
+    //     return <Typer onTypingEnd={this.onTypingEnd} key={index} data={item.data}/>;
+    //   })
+    // }
+
     let index = this.state.index
-    let content
+    let content = <HomeMain />
     let headline
     let computer
 
-    if (Math.abs(this.state.index) === this.state.typersData.length || this.props.store.loader.loaded === true) {
-      content = <HomeMain />
-      headline = null
-      computer = null
-    } else {
-      headline = <Loading />
-      computer = <Computer />
-      content = this.state.typersData.slice(index, index+1).map((item, i) => {
-        return <Typer onTypingEnd={this.onTypingEnd} key={index} data={item.data}/>;
-      })
-    }
+    // if (Math.abs(this.state.index) === this.state.typersData.length || this.props.store.loader.loaded === true) {
+    //   content = <HomeMain />
+    //   headline = null
+    //   computer = null
+    // } else {
+    //   headline = <Loading />
+    //   computer = <Computer />
+    //   content = this.state.typersData.slice(index, index+1).map((item, i) => {
+    //     return <Typer onTypingEnd={this.onTypingEnd} key={index} data={item.data}/>;
+    //   })
+    // }
 
     return (
-      <div className={styles.container}>
-        <CSSTransitionGroup
-          transitionName={styles}
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={500}>
-          {headline}
-          {computer}
-          {content}
-        </CSSTransitionGroup>
+      <div className={classnames(grid.row, styles.container)}>
+        <div className={classnames(grid.colXs12)}>
+          <CSSTransitionGroup
+            transitionName={styles}
+            transitionEnterTimeout={1000}
+            transitionLeaveTimeout={500}>
+            {headline}
+            {computer}
+            {content}
+          </CSSTransitionGroup>
+        </div>
       </div>
     )
   }

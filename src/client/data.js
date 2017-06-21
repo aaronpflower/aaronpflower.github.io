@@ -7,9 +7,6 @@ const Data = {
       data: ["AaronFlower.skills = [", "'Javascript', 'HTML5', 'CSS3', 'React', 'Redux', 'Node'", "]"]
     },
     {
-      data: ["AaronFlower.experince = [","'Self-taught', '3 years', 'SPAs', 'responsive user interfaces'", "]"]
-    },
-    {
       data: ["Redirecting...", "Done!"]
     }
   ],
@@ -21,7 +18,8 @@ const Data = {
       contributions: 'Worked collaboratively with another developer to build responsive UI components.',
       stack: 'HTML, Stylus and Javascript',
       liveUrl: 'http://humandesign.com',
-      heroImg: require('./base/assets/hdBg.png')
+      heroImg: require('./base/assets/hdBg.png'),
+      slideShow: [ { src: require('./base/assets/hdBg.png') }, { src: 'https://placeimg.com/640/480/any' }, { src: require('./base/assets/hdBg.png') } ]
     },
     {
       id: 1,
@@ -58,6 +56,28 @@ const Data = {
       stack: 'Loopback, Mithril, PostgreSQL, NodeJS, Stylus and Webpack',
       heroImg: 'https://placeimg.com/640/480/any'
     }
+  ],
+  aboutData: [
+    {
+      title: 'Pizzas',
+      date: '3 years',
+      summary: 'Worked collaboratively with the engineering team to ensure functional and design requirements were met on projects throughout the project life cycle.'
+    },
+    {
+      title: 'Quality Assurance Tester',
+      date: '10 months',
+      summary: 'Worked collaboratively with the engineering team to ensure functional and design requirements were met on projects throughout the project life cycle.'
+    },
+    {
+      title: 'Front End Developer',
+      date: '1 year 7 months',
+      summary: 'Worked collaboratively with the engineering team to ensure functional and design requirements were met on projects throughout the project life cycle.'
+    },
+    {
+      title: 'Present and on',
+      data: 'now',
+      summary: 'Worked collaboratively with the engineering team to ensure functional and design requirements were met on projects throughout the project life cycle.'
+    },
   ]
 }
 
