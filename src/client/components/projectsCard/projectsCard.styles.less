@@ -18,20 +18,29 @@
     .cardImg {
       transform: scale(1.04);
     }
+    .imgContainer {
+      &:before {
+        opacity: 1;
+      }
+    }
+    .cardTitle {
+      transform: translateY(0%);
+    }
   }
 }
 
 
 .imgContainer {
   position: relative;
-  transition: all .3s ease;
+  transition: all .5s ease;
   overflow: hidden;
   &:before {
-    background: rgba(0, 0, 0, 0.2);
+    transition: all .5s ease;
+    background: rgba(0, 0, 0, 0.6);
     content: " " !important;
     height: 100%;
     left: 0;
-    opacity: 1;
+    opacity: 0;
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -58,12 +67,17 @@
   text-align: left;
   position: absolute;
   bottom: 0;
+  transform: translateY(70%);
   left: 0;
   max-width: 100%;
   padding: 24px;
   font-size: 24px;
   font-weight: 300;
   z-index: 4;
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+  transition-delay: .2s;
 }
 
 .cardContent {
