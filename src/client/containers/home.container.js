@@ -53,7 +53,7 @@ class Home extends Component {
     let content
     let headline
     let computer
-
+    //
     if (Math.abs(this.state.index) === this.state.typersData.length || this.props.store.loader.loaded === true) {
       content = <HomeMain />
       headline = null

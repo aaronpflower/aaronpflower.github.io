@@ -35,7 +35,7 @@ h1, h2, h3, p {
 
 .content {
   background: transparent;
-  z-index: 101;
+  z-index: 1;
   padding-top: 60px;
   margin: auto;
   @media @screen-md {
@@ -50,7 +50,7 @@ h1, h2, h3, p {
   background: @white;
   top: 60px;
   left: 0;
-  z-index: 100;
+  // z-index: 1;
   width: 100vw;
   height: ~"calc(100vh - 60px)";
   pointer-events: none;
@@ -69,9 +69,10 @@ h1, h2, h3, p {
   height: 100%;
   position: relative;
   background-image: radial-gradient(circle, @darkTrans, @white);
-  opacity: .5;
+  opacity: .6;
   &:after {
     position: absolute;
+    left: 0px;
     content: ' ';
     height: 3px;
     width: 3px;
@@ -84,6 +85,7 @@ h1, h2, h3, p {
     animation-fill-mode: none;
     animation-play-state: running;
     transform: translate3d(0,0,0);
+    opacity: 1;
   }
 }
 
@@ -103,48 +105,48 @@ h1, h2, h3, p {
 .line:nth-child(1) {
   &:after {
     animation-delay: 0s;
-    background: @color-primary-3;
+    background: @color-primary-4;
   }
 }
 
 .line:nth-child(2) {
   &:after {
     animation-delay: .5s;
-    background: @color-secondary-1-0;
+    background: @color-secondary-1-4;
   }
 }
 
 .line:nth-child(3) {
   &:after {
     animation-delay: 1s;
-    background: @color-secondary-2-0;
+    background: @color-secondary-2-4;
   }
 }
 
 .line:nth-child(4) {
   &:after {
     animation-delay: 1.5s;
-    background: @color-primary-3;
+    background: @color-primary-4;
   }
 }
 
 .line:nth-child(5) {
   &:after {
     animation-delay: 2s;
-    background: @color-secondary-1-0;
+    background: @color-secondary-1-4;
   }
 }
 
 .line:nth-child(6) {
   &:after {
     animation-delay: 2.5s;
-    background: @color-secondary-2-0;
+    background: @color-secondary-2-4;
   }
 }
 
 .line:nth-child(7) {
   &:after {
     animation-delay: 3s;
-    background: @color-primary-3;
+    background: @color-primary-4;
   }
 }

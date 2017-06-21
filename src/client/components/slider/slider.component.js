@@ -38,15 +38,17 @@ class Slider extends Component {
     })
 
     return (
-      <div className={styles.container}>
+      <div className={classnames(this.props.class, styles.container)}>
         <div onClick={this.nextImg} className={classnames(styles.arrow, styles.rightArrow)}></div>
         <div onClick={this.prevImg} className={classnames(styles.arrow, styles.leftArrow)}></div>
-        <CSSTransitionGroup
-          transitionName={styles}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={500}>
-          {content}
-        </CSSTransitionGroup>
+        <div className={styles.fourThree}>
+          <CSSTransitionGroup
+            transitionName={styles}
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}>
+            {content}
+          </CSSTransitionGroup>
+        </div>
       </div>
     )
   }

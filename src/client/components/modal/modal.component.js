@@ -17,19 +17,23 @@ const Modal = ({ match, history }) => {
     history.goBack()
   }
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>{project.title}</h1>
-      <div className={styles.content}>
-        <div className={styles.imgWrapper}>
-          <Slider slideShow={project.slideShow} />
-        </div>
-        <div className={styles.about}>
-          <h2>Overview:</h2>
-          <p>{project.overview}</p>
-          <h2>Contributions</h2>
-          <p>{project.contributions}</p>
-          <h2>Tech Stack</h2>
-          <p>{project.stack}</p>
+    <div className={classnames(grid.row, styles.container)}>
+      <h2 className={classnames(grid.colXs12, fonts.mediumText, styles.title)}>{project.title}</h2>
+      <div className={classnames(grid.colXs12, grid.colMd8)}>
+        <div className={classnames(grid.row, styles.contentWrapper)}>
+          <div className={classnames(grid.colXs10, grid.colMd8, styles.imgWrapper)}>
+            <div className={grid.row}>
+              <Slider class={grid.colXs12} slideShow={project.slideShow} />
+            </div>
+          </div>
+          <div className={classnames(grid.colXs10, grid.colMd4, styles.about)}>
+            <h2 className={fonts.modalHeader}>Overview:</h2>
+            <p className={fonts.modalParagraph}>{project.overview}</p>
+            <h2 className={fonts.modalHeader}>Contributions:</h2>
+            <p className={fonts.modalParagraph}>{project.contributions}</p>
+            <h2 className={fonts.modalHeader}>Tech Stack:</h2>
+            <p className={fonts.modalParagraph}>{project.stack}</p>
+          </div>
         </div>
       </div>
       <div className={styles.close} onClick={back}></div>

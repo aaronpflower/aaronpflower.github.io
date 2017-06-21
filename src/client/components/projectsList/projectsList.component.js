@@ -17,14 +17,14 @@ function ProjectsList(props) {
       <Header class={grid.colXs12} title={'Projects'} />
       {projectsData.map(i => (
         <Link
-          className={grid.colMd4}
+          className={classnames(grid.colXs12, grid.colMd4)}
           key={i.id}
           to={{
             pathname: `/project/${i.id}`,
             state: { modal: true }
           }}
         >
-          <ProjectCard heroImg={i.heroImg} title={i.title} overview={i.overview} link={i.liveUrl}/>
+          <ProjectCard heroImg={i.heroImg} stack={i.stack} title={i.title} overview={i.overview} link={i.liveUrl}/>
         </Link>
       ))}
     </div>
