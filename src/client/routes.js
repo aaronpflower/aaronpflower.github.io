@@ -28,14 +28,16 @@ const Routes = () => (
           <Route path="/portfolio" component={Portfolio}/>
           <Route path="/blog" component={Blog}/>
         </div>
-        <div className={classnames(grid.row, grid.betweenXs, styles.lines)}>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
+        <div className={classnames(grid.colXs12, styles.lines)}>
+          <div className={classnames(grid.row, grid.betweenXs, styles.lineRow)}>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+            <div className={styles.line}></div>
+          </div>
         </div>
       </div>
     </Router>

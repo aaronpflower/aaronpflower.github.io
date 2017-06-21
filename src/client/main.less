@@ -29,27 +29,25 @@ h1, h2, h3, p {
 
 .mainWrapper {
   flex-direction: column;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
   margin-left: 0px !important;
   margin-right: 0px !important;
 }
 
 .content {
-  background: @white;
-  overflow: hidden;
-  z-index: 20;
+  background: transparent;
+  z-index: 101;
   padding-top: 60px;
   margin: auto;
   @media @screen-md {
     padding-top: 0px;
-    padding-left: 60px !important;
+    padding-left: ~"calc(60px + 0.5rem)" !important;
+    width: ~"calc(100% - 60px)";
   }
 }
 
 .lines {
-  position: absolute;
+  position: fixed;
+  background: @white;
   top: 60px;
   left: 0;
   z-index: 100;
@@ -70,8 +68,8 @@ h1, h2, h3, p {
   width: 1px;
   height: 100%;
   position: relative;
-  background-image: radial-gradient(circle, @dark, @white);
-  opacity: .7;
+  background-image: radial-gradient(circle, @darkTrans, @white);
+  opacity: .5;
   &:after {
     position: absolute;
     content: ' ';
@@ -87,6 +85,10 @@ h1, h2, h3, p {
     animation-play-state: running;
     transform: translate3d(0,0,0);
   }
+}
+
+.lineRow {
+  height: 100%;
 }
 
 @keyframes dot {

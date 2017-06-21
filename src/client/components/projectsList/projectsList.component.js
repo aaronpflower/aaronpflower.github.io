@@ -17,7 +17,7 @@ function ProjectsList(props) {
       <Header class={grid.colXs12} title={'Projects'} />
       {projectsData.map(i => (
         <Link
-          className={grid.colMd3}
+          className={grid.colMd4}
           key={i.id}
           to={{
             pathname: `/project/${i.id}`,
