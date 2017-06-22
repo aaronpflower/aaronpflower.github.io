@@ -15,20 +15,27 @@
 
 .firstName {
   display: flex;
-  font-size: 3em;
+  font-size: 1.5em;
   color: @color-secondary-2-4;
   transform: matrix(1, 0, 0, 1, 0, -7.8);
   position: relative;
-  top: 40px;
   z-index: 10;
+  top: 22px;
+  @media @screen-md {
+    font-size: 3em;
+    top: 40px;
+  }
 }
 
 .lastName {
   transform: matrix(1, 0, 0, 1, 0, 7.8);
   display: flex;
   position: relative;
-  left: -10px;
   opacity: .7;
+  left: -3px;
+  @media @screen-md {
+    left: -10px;
+  }
 }
 
 .letter:nth-child(1) {
@@ -60,15 +67,21 @@
 }
 
 .occupation {
-  font-size: 1em;
   letter-spacing: 3px;
   color: @color-secondary-1-0;
+  font-size: .8em;
+  @media @screen-md {
+    font-size: 1em;
+  }
 }
 
 .strengths {
-  font-size: .6em;
+  font-size: .5em;
   font-weight: 700;
   color: @color-secondary-2-0;
+  @media @screen-md {
+    font-size: .6em;
+  }
 }
 
 .btn {

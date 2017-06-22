@@ -2,9 +2,17 @@ import React, { Component, PropTypes } from 'react'
 import styles from './blog.styles.less'
 import fonts from '../base/fonts.less'
 
+import { connect } from 'react-redux'
+import mapStateToProps from '../utils/mapStateToProps'
+import { setLoader } from '../actions/actions'
+
 class Blog extends Component {
   constructor(props) {
     super(props)
+  }
+
+  componentDidMount() {
+      this.props.dispatch(setLoader())
   }
 
   render() {
@@ -18,4 +26,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog
+export default connect(mapStateToProps)(Blog)

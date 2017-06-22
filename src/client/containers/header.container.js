@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
 import { CSSTransitionGroup } from 'react-transition-group'
+import { connect } from 'react-redux'
 import Nav from '../components/nav/nav.component'
 
+import mapStateToProps from '../utils/mapStateToProps'
 import icons from 'font-awesome/css/font-awesome.css'
 import styles from './header.styles.less'
 
@@ -43,7 +45,7 @@ class Header extends Component {
     }
 
     return (
-      <header className={styles.header}>
+      <header className={classnames(!this.props.store.loader.loaded && styles.loading, styles.header)}>
         <div className={classnames(styles.basicNav)}>
           <Link to="/" className={classnames(styles.logo)}></Link>
           <i onClick={this.toggleMenu} className={classnames(icons.fa, icons.faBars, styles.mobileBars)}/>
@@ -67,4 +69,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default connect(mapStateToProps)(Header)

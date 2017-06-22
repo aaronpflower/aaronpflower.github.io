@@ -3,6 +3,11 @@ import styles from './about.styles.less'
 import classnames from 'classnames'
 import grid from 'flexboxgrid'
 import { aboutData } from '../data'
+
+import { connect } from 'react-redux'
+import mapStateToProps from '../utils/mapStateToProps'
+import { setLoader } from '../actions/actions'
+
 import ReactDom from 'react-dom'
 import { CSSTransitionGroup } from 'react-transition-group'
 import fonts from '../base/fonts.less'
@@ -22,6 +27,7 @@ class About extends Component {
   componentDidMount() {
       window.addEventListener('scroll', this.handleScroll);
       window.addEventListener("resize", this.handleScroll);
+      this.props.dispatch(setLoader())
   }
 
   componentWillUnmount() {
@@ -38,20 +44,20 @@ class About extends Component {
   render() {
     let content = this.state.aboutData.map((item, i) => {
       return (
-        <li className={classnames(this.state.inView && styles.inView, styles.listItem)} key={i}>
-          <div className={classnames(this.state.inView && styles.inView, styles.itemContent)}>
-            <p>{item.title}</p>
-            <p>{item.date}</p>
-            <p className={fonts.smallParagraph}>{item.summary}</p>
+        <li className={classnames(this.state.inView && styles.inView, styles.listItem, grid.colXs12)} key={i}>
+          <div className={classnames(this.state.inView && styles.inView, styles.itemContent, grid.row)}>
+            <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.title)}>{item.title}</p>
+            <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.date)}>{item.date}</p>
+            <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.summary)}>{item.summary}</p>
           </div>
         </li>
       )
     })
 
     return (
-      <div className={styles.container}>
+      <div className={classnames(grid.row, styles.container)}>
         <Header title={'Timeline'} />
-        <ul className={styles.listContainer}>
+        <ul className={classnames(grid.colXs12, styles.listContainer)}>
           {content}
         </ul>
       </div>
@@ -59,4 +65,4 @@ class About extends Component {
   }
 }
 
-export default About
+export default connect(mapStateToProps)(About)

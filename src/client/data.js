@@ -18,7 +18,7 @@ const Data = {
       contributions: 'Worked collaboratively with another developer to build responsive UI components.',
       stack: 'HTML, Stylus and Javascript',
       liveUrl: 'http://humandesign.com',
-      heroImg: require('./base/assets/hd2.jpg'),
+      heroImg: require('./base/assets/hd1.jpg'),
       slideShow: [ { src: require('./base/assets/hd1.jpg') }, { src: require('./base/assets/hd2.jpg') }, { src: require('./base/assets/hd3.jpg') } ]
     },
     {
@@ -28,7 +28,7 @@ const Data = {
       contributions: 'Took on leadership role in development team to organize and delegate tasks, clarify project requirements, and accommodate scope creep. Personally took on majority of development of the static website. Integrated Mailchimp and Mandrill for an AB testing email campaign. Assisted with full stack bug fixes.',
       stack: 'HTML, Stylus, Javascript, MongoDB, NodeJS, ExpressJS and MithrilJS',
       liveUrl: 'https://socialactionmachine.com/',
-      heroImg: require('./base/assets/sam3.jpg'),
+      heroImg: require('./base/assets/sam1.jpg'),
       slideShow: [ { src: require('./base/assets/sam1.jpg') }, { src: require('./base/assets/sam2.jpg') }, { src: require('./base/assets/sam3.jpg') }, { src: require('./base/assets/sam4.jpg') }, { src: require('./base/assets/sam5.jpg') } ]
     },
     {

@@ -2,11 +2,16 @@ import React, { Component, PropTypes } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
-import Modal from '../components/modal/modal.component'
-import ProjectsList from '../components/projectsList/projectsList.component'
 
 import styles from './portfolio.styles.less'
 import fonts from '../base/fonts.less'
+
+import { connect } from 'react-redux'
+import mapStateToProps from '../utils/mapStateToProps'
+import { setLoader } from '../actions/actions'
+
+import Modal from '../components/modal/modal.component'
+import ProjectsList from '../components/projectsList/projectsList.component'
 
 // https://codepen.io/jakubtursky/pen/vEwZop
 class PortfolioContainer extends Component {
@@ -44,10 +49,22 @@ class PortfolioContainer extends Component {
   }
 }
 
-const PortfolioGallery = () => (
-  <Router>
-    <Route component={PortfolioContainer} />
-  </Router>
-)
+class PortfolioGallery extends Component {
+  constructor(props) {
+    super(props)
+  }
 
-export default PortfolioGallery
+  componentDidMount() {
+    this.props.dispatch(setLoader())
+  }
+
+  render() {
+    return (
+      <Router>
+        <Route component={PortfolioContainer} />
+      </Router>
+    )
+  }
+}
+
+export default connect(mapStateToProps)(PortfolioGallery)
