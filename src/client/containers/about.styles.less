@@ -18,7 +18,7 @@
   padding-top: 50px;
   background: transparent;
   &:after {
-    content: url('../base/assets/pizza.svg');
+    content: ' ';
     position: absolute;
     left: -15%;
     bottom: 0;
@@ -27,8 +27,8 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: inherit;
-    opacity: 0;
+    background: @color-secondary-2-0;
+    opacity: 1;
   }
   > .itemContent::before {
     left: -16px;
@@ -49,7 +49,7 @@
     &:nth-child(odd) .itemContent::before {
       left: -16px;
       border-width: 8px 16px 8px 0;
-      border-color: transparent @color-secondary-2-4 transparent transparent;
+      border-color: transparent @color-secondary-1-0 transparent transparent;
     }
 
     &:nth-child(even) .itemContent {
@@ -61,7 +61,7 @@
       right: -16px;
       left: auto;
       border-width: 8px 0 8px 16px;
-      border-color: transparent transparent transparent @color-secondary-2-4;
+      border-color: transparent transparent transparent @color-secondary-1-0;
     }
 
   }
@@ -98,11 +98,27 @@
 }
 
 .title {
-  background: @color-secondary-2-4;
-  padding: 15px;
-}
-
-.date, .summary {
+  background: @white;
   color: @dark;
   padding: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.date {
+  color: @dark;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 4px;
+  font-weight: lighter;
+}
+
+.summary {
+  color: @dark;
+  padding: 15px;
+  font-weight: 300;
+  font-size: .9rem;
+  line-height: 2rem;
+  opacity: .7;
 }

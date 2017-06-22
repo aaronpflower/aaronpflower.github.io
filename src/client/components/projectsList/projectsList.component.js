@@ -3,7 +3,7 @@ import styles from './projectsList.styles.less'
 import classnames from 'classnames'
 import grid from 'flexboxgrid'
 import fonts from '../../base/fonts.less'
-import { projectsData } from '../../data'
+import { portfolioData } from '../../data'
 
 import { Link } from 'react-router-dom'
 
@@ -14,8 +14,8 @@ function ProjectsList(props) {
 
   return (
     <div className={classnames(props.isModal && styles.blur, grid.row, styles.projects)}>
-      <Header class={grid.colXs12} title={'Projects'} />
-      {projectsData.map(i => (
+      <Header class={grid.colXs12} title={'Portfolio'} />
+      {portfolioData.map(i => (
         <Link
           className={classnames(grid.colXs12, grid.colMd4)}
           key={i.id}

@@ -5,6 +5,8 @@ import classnames from 'classnames'
 
 import icons from 'font-awesome/css/font-awesome.css'
 
+import TriColoredBars from '../triColoredBars/triColoredBars.component'
+
 function ProjectCard(props) {
 
     return (
@@ -17,13 +19,9 @@ function ProjectCard(props) {
           <span className={classnames(icons.fa, icons.faWrench, styles.wrench)}></span>
           <p className={classnames(fonts.smallText, styles.stack)}>{props.stack}</p>
         </div>
-        <div className={styles.triColoredBorder}>
-          <span className={styles.red}></span>
-          <span className={styles.blue}></span>
-          <span className={styles.yellow}></span>
-        </div>
+        <TriColoredBars />
         <div className={styles.cardAction}>
-          <a className={fonts.smallText} href={props.link}>Live Url</a>
+          {props.link ? <a className={fonts.smallText} href={props.link}>Live Url</a> : null}
         </div>
       </div>
     )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { projectsData } from '../../data'
+import { portfolioData } from '../../data'
 import styles from './modal.styles.less'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
@@ -8,7 +8,7 @@ import fonts from '../../base/fonts.less'
 import Slider from '../slider/slider.component'
 
 const Modal = ({ match, history }) => {
-  const project = projectsData[parseInt(match.params.id, 10)]
+  const project = portfolioData[parseInt(match.params.id, 10)]
   if (!project) {
     return null
   }

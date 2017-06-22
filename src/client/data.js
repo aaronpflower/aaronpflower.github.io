@@ -10,11 +10,11 @@ const Data = {
       data: ["Redirecting...", "Done!"]
     }
   ],
-  projectsData: [
+  portfolioData: [
     {
       id: 0,
       title: 'Human Design',
-      overview: 'Human Design’s website is a responsive site built with custom HTML, Stylus and Javascript in order to give users the best experience on any browser size to communicate the vision, values and create brand awareness for the company.',
+      overview: 'Human Design’s website is a responsive site built with custom HTML, Stylus and Javascript in order to give users the best experience on any browser size. It’s mission is to clearly communicate the company’s vision, values and create brand awareness.',
       contributions: 'Worked collaboratively with another developer to build responsive UI components.',
       stack: 'HTML, Stylus and Javascript',
       liveUrl: 'http://humandesign.com',
@@ -34,9 +34,9 @@ const Data = {
     {
       id: 2,
       title: 'The Ivory Game',
-      overview: 'The Ivory Game website is an informative site for the Netflix Original Documentary. I focused on developing a responsive layout so that the custom design was visually pleasing across all browser sizes.',
-      contributions: 'Worked collaboratively with another developer to build responsive UI components.',
-      stack: 'Jade, Javascript and VelocityJS',
+      overview: 'The Ivory Game website is an informative site for the Netflix Original Documentary.',
+      contributions: 'Worked collaboratively with another developer to build responsive UI components. I focused on developing a responsive layout so that the custom design was visually pleasing across all browser sizes.',
+      stack: 'Jade, Stylus, Javascript and VelocityJS',
       liveUrl: 'https://theivorygame.com',
       heroImg: require('./base/assets/ivory1.jpg'),
       slideShow: [ { src: require('./base/assets/ivory1.jpg') }, { src: require('./base/assets/ivory2.jpg') }, { src: require('./base/assets/ivory3.jpg') }, { src: require('./base/assets/ivory4.jpg') }, { src: require('./base/assets/ivory5.jpg') }, { src: require('./base/assets/ivory6.jpg') }, { src: require('./base/assets/ivory7.jpg') } ]
@@ -45,7 +45,7 @@ const Data = {
       id: 3,
       title: 'Verge of Extinction',
       overview: 'Verge of Extinction is a static website raising awareness about Elephant extinction and an upcoming concert to raise money for the cause.',
-      contributions: 'Worked collaboratively with another developer to build UI components which included a custom page loader and modals. Added Node server, Express routing, and custom forms for Mailchimp and Stripe integration.',
+      contributions: 'Collaborated with a colleague to build UI components which included a custom page loader and modals. Added Node server, Express routing, and custom forms for Mailchimp and Stripe integration.',
       stack: 'Jade, Stylus, Javascript, ExpressJS and NodeJS',
       liveUrl: 'http://vergeofextinction.org/',
       heroImg: require('./base/assets/verge1.jpg'),
@@ -55,7 +55,7 @@ const Data = {
       id: 4,
       title: 'Humanwire',
       overview: 'Humanwire was a rewrite of an existing crowdfunding application for refugees around the world. The application encompasses both an administrative dashboard and public facing site.',
-      contributions: 'Worked collaboratively with supervising senior developer. Developed the style guide and pattern library for reference and design updates of reusable components. Developed full stack user stories - user login, signup, and refuge application form. Initial development of UI for the admin dashboard.',
+      contributions: 'Worked on the project with supervising senior developer. Developed the style guide and pattern library for reference and design updates of reusable components. Developed full stack user stories - user login, signup, and refuge application form. Initial development of UI for the admin dashboard.',
       stack: 'Loopback, Mithril, PostgreSQL, NodeJS, Stylus and Webpack',
       heroImg: require('./base/assets/human1.jpg'),
       slideShow: [ { src: require('./base/assets/human1.jpg') }, { src: require('./base/assets/human2.jpg') } ]
@@ -63,24 +63,24 @@ const Data = {
   ],
   aboutData: [
     {
-      title: 'Pizzas',
-      date: '3 years',
-      summary: 'Worked collaboratively with the engineering team to ensure functional and design requirements were met on projects throughout the project life cycle.'
+      title: 'Web Development Training',
+      date: 'March 2014 - October 2014',
+      summary: 'Dreaming of a career that would challenge and excite my analytical nature and passion for problem solving, I began to pursue Web Development. I spent my days working at Whole Foods, and my evenings taking online classes, studying textbooks, and networking.'
     },
     {
       title: 'Quality Assurance Tester',
-      date: '10 months',
-      summary: 'Worked collaboratively with the engineering team to ensure functional and design requirements were met on projects throughout the project life cycle.'
+      date: 'October 2014 - August 2015',
+      summary: 'While in Quality Assurance, I continued to pursue a deeper understanding of development through collaborating with the development team at the company. I was soon taking on development tasks for various projects. After ten months in Quality Assurance, and two months learning development on the job, I was promoted to Front End Web Developer.'
     },
     {
       title: 'Front End Developer',
-      date: '1 year 7 months',
-      summary: 'Worked collaboratively with the engineering team to ensure functional and design requirements were met on projects throughout the project life cycle.'
+      date: 'August 2015 - February 2017',
+      summary: 'As a developer, I contributed significantly to many projects that required transforming mockups into websites via JQuery, HTML, and CSS (vanilla CSS, Stylus, and LESS). I have also contributed to NodeJS applications using MithrilJS, Redux, ExpressJS, PostgreSQL and MongoDB.'
     },
     {
-      title: 'Present and on',
-      data: 'now',
-      summary: 'Worked collaboratively with the engineering team to ensure functional and design requirements were met on projects throughout the project life cycle.'
+      title: 'Present',
+      date: 'Today until infinity',
+      summary: 'I have set my trajectory towards excellence in my field, and looking long-term I desire to use my knowledge base to one day become a leader within a development team. I hope to ultimately support and mentor more junior developers as I have been supported and mentored.'
     },
   ]
 }

@@ -7,7 +7,9 @@ html {
   font-size: 1.25rem;
   box-sizing: border-box;
   font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-size: 16px;
 }
 
 body {
@@ -69,7 +71,7 @@ h1, h2, h3, p {
   height: 100%;
   position: relative;
   background-image: radial-gradient(circle, @darkTrans, @white);
-  opacity: .8;
+  opacity: 1;
   &:after {
     position: absolute;
     left: 0px;
@@ -79,7 +81,7 @@ h1, h2, h3, p {
     border-radius: 50%;
     animation-name: dot;
     animation-duration: 3s;
-    animation-timing-function: ease-out;
+    animation-timing-function: cubic-bezier(.3,1,.9,.2);
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-fill-mode: none;
@@ -105,48 +107,48 @@ h1, h2, h3, p {
 .line:nth-child(1) {
   &:after {
     animation-delay: 0s;
-    background: @color-primary-4;
+    background: @color-secondary-1-0;
   }
 }
 
 .line:nth-child(2) {
   &:after {
     animation-delay: .5s;
-    background: @color-secondary-1-4;
+    background: @color-secondary-2-0;
   }
 }
 
 .line:nth-child(3) {
   &:after {
     animation-delay: 1s;
-    background: @color-secondary-2-4;
+    background: @color-complement-0;
   }
 }
 
 .line:nth-child(4) {
   &:after {
     animation-delay: 1.5s;
-    background: @color-primary-4;
+    background: @color-secondary-1-0;
   }
 }
 
 .line:nth-child(5) {
   &:after {
     animation-delay: 2s;
-    background: @color-secondary-1-4;
+    background: @color-secondary-2-0;
   }
 }
 
 .line:nth-child(6) {
   &:after {
     animation-delay: 2.5s;
-    background: @color-secondary-2-4;
+    background: @color-complement-0;
   }
 }
 
 .line:nth-child(7) {
   &:after {
     animation-delay: 3s;
-    background: @color-primary-4;
+    background: @color-secondary-1-0;
   }
 }

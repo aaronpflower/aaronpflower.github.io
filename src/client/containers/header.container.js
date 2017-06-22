@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router-dom'
+
+import { connect } from 'react-redux'
+import mapStateToProps from '../utils/mapStateToProps'
+
+import Nav from '../components/nav/nav.component'
+
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
 import { CSSTransitionGroup } from 'react-transition-group'
-import { connect } from 'react-redux'
-import Nav from '../components/nav/nav.component'
-
-import mapStateToProps from '../utils/mapStateToProps'
 import icons from 'font-awesome/css/font-awesome.css'
 import styles from './header.styles.less'
 

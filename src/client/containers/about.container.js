@@ -1,18 +1,19 @@
 import React, { Component, PropTypes } from 'react'
+import ReactDom from 'react-dom'
+import { aboutData } from '../data'
+
 import styles from './about.styles.less'
 import classnames from 'classnames'
 import grid from 'flexboxgrid'
-import { aboutData } from '../data'
+import { CSSTransitionGroup } from 'react-transition-group'
+import fonts from '../base/fonts.less'
 
 import { connect } from 'react-redux'
 import mapStateToProps from '../utils/mapStateToProps'
 import { setLoader } from '../actions/actions'
 
-import ReactDom from 'react-dom'
-import { CSSTransitionGroup } from 'react-transition-group'
-import fonts from '../base/fonts.less'
-
 import Header from '../components/header/header.component'
+import TriColoredBars from '../components/triColoredBars/triColoredBars.component'
 
 class About extends Component {
   constructor(props) {
@@ -41,12 +42,14 @@ class About extends Component {
     })
   }
   // https://codepen.io/tutsplus/pen/QNeJgR
+
   render() {
     let content = this.state.aboutData.map((item, i) => {
       return (
         <li className={classnames(this.state.inView && styles.inView, styles.listItem, grid.colXs12)} key={i}>
           <div className={classnames(this.state.inView && styles.inView, styles.itemContent, grid.row)}>
             <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.title)}>{item.title}</p>
+            <TriColoredBars />
             <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.date)}>{item.date}</p>
             <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.summary)}>{item.summary}</p>
           </div>
