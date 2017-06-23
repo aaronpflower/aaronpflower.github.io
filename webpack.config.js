@@ -19,7 +19,7 @@ const extractLess = new ExtractTextPlugin({
 module.exports = {
     entry: './src/client/index.js',
     output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'docs'),
 		filename: '[name]-[hash].js',
 		publicPath: '/',
 	},
