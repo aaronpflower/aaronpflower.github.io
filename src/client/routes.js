@@ -21,8 +21,8 @@ const Routes = () => (
   <Provider store={store}>
     <Router>
       <div className={classnames(grid.row, styles.mainWrapper)}>
-        <Header/>
         <div className={classnames(grid.colXs8, styles.content)}>
+          <Header/>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
           <Route path="/portfolio" component={Portfolio}/>
