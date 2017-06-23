@@ -1,0 +1,124 @@
+@import '../base/varibles.less';
+
+.container {
+  justify-content: center;
+  position: relative;
+}
+
+.listContainer {
+  background: transparent;
+  color: @white;
+  padding: 50px 0;
+}
+
+.listItem {
+  list-style-type: none;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: transparent;
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: -15%;
+    bottom: 0;
+    transition: all .3s ease;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: @color-secondary-2-0;
+    opacity: 1;
+  }
+  > .itemContent::before {
+    left: -16px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent @color-secondary-2-4 transparent transparent;
+  }
+  @media @screen-sm {
+    margin: 0 auto;
+    width: 6px;
+    &:after {
+      left: 50%;
+    }
+    &:nth-child(odd) .itemContent {
+      left: 45px;
+      transform: translate3d(200px, 0, 0);
+    }
+
+    &:nth-child(odd) .itemContent::before {
+      left: -16px;
+      border-width: 8px 16px 8px 0;
+      border-color: transparent @color-secondary-1-0 transparent transparent;
+    }
+
+    &:nth-child(even) .itemContent {
+      left: -439px;
+      transform: translate3d(-200px, 0, 0);
+    }
+
+    &:nth-child(even) .itemContent::before {
+      right: -16px;
+      left: auto;
+      border-width: 8px 0 8px 16px;
+      border-color: transparent transparent transparent @color-secondary-1-0;
+    }
+
+  }
+}
+
+.itemContent {
+  position: relative;
+  bottom: 0;
+  background: @white;
+  box-shadow: @shadowDark;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  @media @screen-sm {
+    width: 400px;
+  }
+}
+
+.inView {
+  transform: none !important;
+  visibility: visible;
+  opacity: 1;
+  &:after {
+    opacity: 1;
+  }
+}
+
+.title {
+  background: @white;
+  color: @dark;
+  padding: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.date {
+  color: @dark;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 4px;
+  font-weight: lighter;
+}
+
+.summary {
+  color: @dark;
+  padding: 15px;
+  font-weight: 300;
+  font-size: .9rem;
+  line-height: 2rem;
+  opacity: .7;
+}
