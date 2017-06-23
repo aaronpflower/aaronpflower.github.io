@@ -18,7 +18,8 @@
 }
 
 .fourThree {
-  .aspectRatio(4, 3)
+  .aspectRatio(4, 3);
+  box-shadow: @shadowDark;
 }
 
 .container {
@@ -32,18 +33,10 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.3);
     pointer-events: none;
     z-index: 3;
     transition: all .3s ease;
-    @media @screen-md {
-      opacity: 0;
-    }
-  }
-  &:hover {
-    &:before {
-      opacity: 0;
-    }
+    opacity: 0;
   }
 }
 
@@ -66,6 +59,10 @@
   cursor: pointer;
   transition: all .3s ease;
   transform: translateZ(0);
+  opacity: .5;
+  &:hover {
+    opacity: .8;
+  }
 }
 
 .leftArrow {
@@ -80,6 +77,8 @@
 
 .img {
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
 }
