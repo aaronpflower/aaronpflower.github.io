@@ -1,0 +1,106 @@
+@import '../../base/varibles.less';
+
+.aspectRatio(@width, @height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (@height / @width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.fourThree {
+  .aspectRatio(4, 3);
+  box-shadow: @shadowDark;
+}
+
+.container {
+  position: relative;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+  &:before {
+    content: " " !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 3;
+    transition: all .3s ease;
+    opacity: 0;
+  }
+}
+
+.container span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  z-index: 100;
+  cursor: pointer;
+  transition: all .3s ease;
+  transform: translateZ(0);
+  opacity: .5;
+  &:hover {
+    opacity: .8;
+  }
+}
+
+.leftArrow {
+  background-image: url('../../base/assets/leftArrow.svg');
+  left: 0px;
+}
+
+.rightArrow {
+  right: 0px;
+  background-image: url('../../base/assets/rightArrow.svg');
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.enter {
+    opacity: 0.01;
+    transition: all .5s ease-in;
+}
+.enter.enterActive {
+    opacity: 1;
+}
+.leave {
+    opacity: 1;
+    transition: all .5s ease-in;
+}
+.leave.leaveActive {
+    opacity: 0.01;
+}
+.appear {
+    opacity: 0.01;
+}
+.appear.appearActive {
+    opacity: 1;
+    transition: all .5s ease-in;
+}
