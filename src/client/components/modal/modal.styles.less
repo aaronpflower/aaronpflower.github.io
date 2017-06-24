@@ -1,12 +1,12 @@
 @import '../../base/varibles.less';
 
-.modalOverlay {
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #fff;
+  background-color: @dark;
   z-index: 40;
   transition: opacity .25s ease 0s, visibility linear .35s;
   opacity: .7;
@@ -15,60 +15,35 @@
   transition-duration: .2s, 0s;
 }
 
-.modalFrame {
+.container {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
   z-index: 50;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   visibility: visible;
-  .modalInset {
-    animation: modalComeIn .25s ease;
-    visibility: visible; /* to keep @ final state */
-  }
-  .modalBody {
-    opacity: 1;
-    transform: translateY(0) scale(1,1);
-  }
-}
-
-.stateLeave {
-  visibility: visible;
-  .modalInset {
-      animation: modalHeadOut .35s ease .1s;
-      visibility: visible;
-  }
-  .modalBody {
-      opacity: 0;
-      transition-delay: 0s;
-      transition-duration: .35s;
-      transition-timing-function: ease;
-      transform: translateY(25px);
-  }
-}
-
-@-moz-document url-prefix() {
-    .modalFrame {
-        height: calc(100% - 55px);
-    }
+  justify-content: center;
+  align-items: center;
 }
 
 .modal {
   text-align: left;
-  max-width: 1280px !important;
-  max-height: 720px;
+  background-color: @white;
+  // max-width: 960px !important;
 }
 
 .modalInset {
   position: relative;
-  padding: 60px;
-  background-color: white;
+  background-color: @white;
   box-shadow: 2px 2px 8px 1px rgba(0,0,0,.2);
   backface-visibility: hidden; // helps render animation
   transform: translate3d(0,0,0); // helps render animation
   transform-style: preserve-3d; // helps render animation
+  animation: modalComeIn .25s ease;
+  visibility: visible; /* to keep @ final state */
 }
 
 .close {
@@ -82,26 +57,32 @@
   top: 10px;
   right: 10px;
   padding: 10px;
-  height: 20px;
-  width: 20px;
+  height: 8px;
+  width: 8px;
   opacity: .4;
+  z-index: 200;
   &:hover {
     opacity: 1;
   }
 }
 
 .title {
-  text-align: center;
+  text-align: center !important;
   margin-bottom: 46px;
   font-size: 2.5em;
+
 }
 
 .modalBody {
-  opacity: 0;
+  padding: 60px;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
   transform: translateY(0) scale(.8, .8);
   transition-property: opacity, transform;
   transition-duration: .25s;
   transition-delay: .1s;
+  opacity: 1;
+  transform: translateY(0) scale(1,1);
 }
 
 @keyframes modalComeIn {

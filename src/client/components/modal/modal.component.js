@@ -21,14 +21,12 @@ const Modal = ({ match, history }) => {
   }
   return (
     <div>
-      <div className={classnames(grid.row, grid.centerXs, styles.modalFrame)}>
-        <div className={classnames(grid.colXs12, styles.modal)}>
+      <div className={classnames(grid.row, styles.container)}>
+        <div className={classnames(grid.colXs12, grid.colMd8, styles.modal)}>
           <div className={classnames(grid.row, styles.modalInset)}>
             <div className={styles.close} onClick={back}></div>
             <div className={classnames(grid.colXs12, styles.modalBody)}>
-              <div className={grid.row}>
-                <h2 className={classnames(grid.colXs12, fonts.mediumText, styles.title)}>{project.title}</h2>
-              </div>
+              <h2 className={classnames(grid.row, fonts.mediumText, styles.title)}>{project.title}</h2>
               <div className={grid.row}>
                 <Slider class={classnames(grid.colXs12, grid.colMd8)} slideShow={project.slideShow} />
                 <div className={classnames(grid.colXs12, grid.colMd4)}>
@@ -42,7 +40,7 @@ const Modal = ({ match, history }) => {
           </div>
         </div>
       </div>
-      <div className={styles.modalOverlay}></div>
+      <div className={styles.overlay}></div>
     </div>
   )
 }
