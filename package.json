@@ -8,9 +8,7 @@
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server",
     "test": "./node_modules/.bin/mocha",
-    "build": "webpack --config webpack.prod.config.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "webpack --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
