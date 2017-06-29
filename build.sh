@@ -1,13 +1,19 @@
 # TODO figure out what needs to be done
+git checkout development
+
+git push origin development
+
 git checkout -b building
 
-rm -f ./docs
+rm -rf ./docs
 
 npm run build
 
-rm -f ./src
+rm -rf ./src
 
 mv ./docs ./
+
+rm -rf ./docs
 
 git add .
 
