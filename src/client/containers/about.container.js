@@ -12,7 +12,7 @@ import { connect } from 'react-redux'
 import mapStateToProps from '../utils/mapStateToProps'
 import { setLoader } from '../actions/actions'
 
-import Header from '../components/header/header.component'
+import PageHeadline from '../components/pageHeadline/pageHeadline.component'
 import TriColoredBars from '../components/triColoredBars/triColoredBars.component'
 
 class About extends Component {
@@ -22,31 +22,19 @@ class About extends Component {
       aboutData: aboutData,
       inView: false
     }
-    this.handleScroll = this.handleScroll.bind(this)
   }
 
   componentDidMount() {
-      window.addEventListener('scroll', this.handleScroll);
-      window.addEventListener("resize", this.handleScroll);
+      this.setState({
+        inView: true
+      })
       this.props.dispatch(setLoader())
   }
-
-  componentWillUnmount() {
-      window.removeEventListener('scroll', this.handleScroll);
-      window.removeEventListener("resize", this.handleScroll);
-  }
-
-  handleScroll() {
-    this.setState({
-      inView: true
-    })
-  }
-  // https://codepen.io/tutsplus/pen/QNeJgR
 
   render() {
     let content = this.state.aboutData.map((item, i) => {
       return (
-        <li className={classnames(this.state.inView && styles.inView, styles.listItem, grid.colXs12)} key={i}>
+        <li className={classnames(styles.listItem, grid.colXs12)} key={i}>
           <div className={classnames(this.state.inView && styles.inView, styles.itemContent, grid.row)}>
             <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.title)}>{item.title}</p>
             <TriColoredBars />
@@ -59,7 +47,7 @@ class About extends Component {
 
     return (
       <div className={classnames(grid.row, styles.container)}>
-        <Header title={'Timeline'} />
+        <PageHeadline title={"Work History"} />
         <ul className={classnames(grid.colXs12, styles.listContainer)}>
           {content}
         </ul>

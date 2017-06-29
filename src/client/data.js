@@ -14,7 +14,7 @@ const Data = {
     {
       id: 0,
       title: 'Human Design',
-      overview: 'Human Design’s website is a responsive site built with custom HTML, Stylus and Javascript in order to give users the best experience on any browser size. It’s mission is to clearly communicate the company’s vision, values and create brand awareness.',
+      overview: 'Human Design’s website is a responsive site to give users the best experience in any browser size. Its mission is to clearly communicate the company’s vision, values and create brand awareness.',
       contributions: 'Worked collaboratively with another developer to build responsive UI components.',
       stack: 'HTML, Stylus and Javascript',
       liveUrl: 'http://humandesign.com',
@@ -44,7 +44,7 @@ const Data = {
     {
       id: 3,
       title: 'Verge of Extinction',
-      overview: 'Verge of Extinction is a static website raising awareness about Elephant extinction and an upcoming concert to raise money for the cause.',
+      overview: 'Verge of Extinction is a static website raising awareness about elephant extinction and an upcoming concert to raise money for the cause.',
       contributions: 'Collaborated with a colleague to build UI components which included a custom page loader and modals. Added Node server, Express routing, and custom forms for Mailchimp and Stripe integration.',
       stack: 'Jade, Stylus, Javascript, ExpressJS and NodeJS',
       liveUrl: 'http://vergeofextinction.org/',
@@ -55,7 +55,7 @@ const Data = {
       id: 4,
       title: 'Humanwire',
       overview: 'Humanwire was a rewrite of an existing crowdfunding application for refugees around the world. The application encompasses both an administrative dashboard and public facing site.',
-      contributions: 'Worked on the project with supervising senior developer. Developed the style guide and pattern library for reference and design updates of reusable components. Developed full stack user stories - user login, signup, and refuge application form. Initial development of UI for the admin dashboard.',
+      contributions: 'Worked on the project with supervising senior developer. Developed the style guide and pattern library for reference and design updates of reusable components. Developed full stack user stories - user login, signup, and an application form. Initial development of UI for the admin dashboard.',
       stack: 'Loopback, Mithril, PostgreSQL, NodeJS, Stylus and Webpack',
       heroImg: require('./base/assets/human1.jpg'),
       slideShow: [ { src: require('./base/assets/human1.jpg') }, { src: require('./base/assets/human2.jpg') } ]
@@ -70,7 +70,7 @@ const Data = {
     {
       title: 'Quality Assurance Tester',
       date: 'October 2014 - August 2015',
-      summary: 'While in Quality Assurance, I continued to pursue a deeper understanding of development through collaborating with the development team at the company. I was soon taking on development tasks for various projects. After ten months in Quality Assurance, and two months learning development on the job, I was promoted to Front End Web Developer.'
+      summary: 'I was hired as a Quality Assurance Tester by Human Design, a startup in Boulder, CO. While in Quality Assurance, I continued to pursue a deeper understanding of development through collaborating with the development team at the company. I was soon taking on development tasks for various projects. After ten months in Quality Assurance, and two months learning development on the job, I was promoted to Front End Web Developer.'
     },
     {
       title: 'Front End Developer',
@@ -80,7 +80,7 @@ const Data = {
     {
       title: 'Present',
       date: 'Today until infinity',
-      summary: 'I have set my trajectory towards excellence in my field, and looking long-term I desire to use my knowledge base to one day become a leader within a development team. I hope to ultimately support and mentor more junior developers as I have been supported and mentored.'
+      summary: 'I plan to keep pushing and learning, to keep exploring and growing. My goal is to become the best in my field and one day become a leader of a development team. From there, I hope to support and mentor junior developers as I have been supported and mentored.'
     },
   ]
 }
