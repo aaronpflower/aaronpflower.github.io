@@ -13,7 +13,6 @@ import { setLoader } from '../actions/actions'
 import Modal from '../components/modal/modal.component'
 import ProjectsList from '../components/projectsList/projectsList.component'
 
-// https://codepen.io/jakubtursky/pen/vEwZop
 class PortfolioContainer extends Component {
   constructor(props) {
     super(props)
@@ -32,6 +31,7 @@ class PortfolioContainer extends Component {
 
   render() {
     const { location } = this.props
+    console.log(this)
     const isModal = !!(
       location.state &&
       location.state.modal &&
