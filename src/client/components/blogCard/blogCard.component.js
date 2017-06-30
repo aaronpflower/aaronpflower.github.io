@@ -1,25 +1,23 @@
 import React from 'react'
-import styles from './projectsCard.styles.less'
+import styles from './blogCard.styles.less'
 import fonts from '../../base/fonts.less'
 import classnames from 'classnames'
+import moment from 'moment'
 
 import icons from 'font-awesome/css/font-awesome.css'
 
-import TriColoredBars from '../triColoredBars/triColoredBars.component'
-
-function ProjectCard(props) {
-
+function BlogCard(props) {
+    let date = moment(props.date).format('L');
     return (
       <div className={styles.container}>
         <div className={styles.imgContainer}>
           <img className={styles.cardImg} src={props.heroImg} />
-          <span className={styles.cardTitle}>{props.title}</span>
         </div>
         <div className={styles.cardContent}>
-          <span className={classnames(icons.fa, icons.faWrench, styles.wrench)}></span>
-          <p className={classnames(fonts.smallText, styles.stack)} dangerouslySetInnerHTML={{__html: props.stack}}></p>
+          <p className={classnames(fonts.smallText, styles.date)}>{date}</p>
+          <p className={classnames(fonts.mediumText, styles.cardTitle)}>{props.title}</p>
+          <p className={classnames(fonts.smallText, styles.intro)} dangerouslySetInnerHTML={{__html: props.intro}}></p>
         </div>
-        <TriColoredBars />
         <div className={styles.cardAction}>
           {props.link ? <a className={fonts.smallText} href={props.link}>Live Url</a> : null}
         </div>
@@ -27,4 +25,4 @@ function ProjectCard(props) {
     )
 }
 
-export default ProjectCard
+export default BlogCard

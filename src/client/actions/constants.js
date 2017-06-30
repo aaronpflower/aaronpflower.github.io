@@ -1,3 +1,8 @@
 module.exports = {
-  LOADED: "LOADED"
+  // GENERAL STATE
+  LOADED: "LOADED",
+
+  // BLOG
+  GET_POSTS: "GET_POSTS"
+
 }

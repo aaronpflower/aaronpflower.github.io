@@ -1,0 +1,74 @@
+@import '../../base/varibles.less';
+
+.container {
+  cursor: pointer;
+  color: @dark;
+  position: relative;
+  margin: .5rem 0 1rem 0;
+  background-color: #fff;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  background-color: #fff;
+  transform: scale(1);
+  transition: all .3s ease;
+  border: 1px solid rgba(0,0,0,.1);
+}
+
+
+.imgContainer {
+  position: relative;
+  transition: all .5s ease;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.cardImg {
+  transform: scale(1);
+  transition: all .3s ease;
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.cardTitle {
+  color: @dark;
+  text-align: left;
+  font-weight: bolder;
+  font-size: 2em;
+  line-height: 1;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 0 0 2px 2px;
+  text-align: left;
+}
+
+.cardAction {
+  text-align: left;
+  position: relative;
+  background-color: inherit;
+  padding: 16px 24px;
+  border-radius: 0 0 2px 2px;
+}
+
+.cardAction a {
+  color: @dark;
+}
+
+.intro {
+  display: -webkit-box!important;
+  color: @dark;
+  line-height: 1.4;
+  max-height: 4.2em;
+  -webkit-line-clamp: 3!important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

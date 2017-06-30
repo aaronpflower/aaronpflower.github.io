@@ -19,7 +19,7 @@ const extractLess = new ExtractTextPlugin({
 module.exports = {
     entry: './src/client/index.js',
     output: {
-		path: path.resolve(__dirname, 'docs'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: '[name]-[hash].js',
 		publicPath: '/',
 	},
@@ -34,7 +34,14 @@ module.exports = {
 
     devServer: {
         // https://github.com/chimurai/http-proxy-middleware#options ?
+        proxy: {
+            "/api": {
+                target: "http://localhost:3000"
+            }
+        },
+        contentBase: './dist',
         compress: true,
+        port: 3001,
         historyApiFallback: true
     },
 
