@@ -36,11 +36,16 @@ app.get('/api/v1/posts', function(req, res) {
 		json: true
 	}
 	request(options)
-		.then(function(response) {
-			res.send(response.items)
+		.then(response => {
+			res.status(200).json({
+					status: 'success',
+					posts: response.items
+			})
 		})
-		.catch(function(e) {
-			res.status(500).json(e);
+		.catch(err => {
+			res.status(500).json({
+					status: 'error'
+			})
 		})
 })
 
@@ -49,3 +54,5 @@ app.listen(port, () => {
 		console.info('Server running on port '+port)
 	}
 })
+
+module.exports = app;
