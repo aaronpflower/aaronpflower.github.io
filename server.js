@@ -29,6 +29,10 @@ const limiterOptions = {
 	}
 }
 
+app.get('/', function(req, res) {
+	res.sendFile(__dirname + '/dist/index.html')    
+});
+
 app.get('/api/v1/posts', function(req, res) {
 	var options = {
 		url: 'https://www.googleapis.com/blogger/v3/blogs/' + process.env.BLOG_ID + '/posts?key=' + process.env.BLOG_API_KEY + '&fetchImages=true',
