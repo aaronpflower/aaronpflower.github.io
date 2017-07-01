@@ -9,13 +9,17 @@ const app = express()
 
 const request = require('request-promise')
 const helmet = require('helmet')
-const client = require('redis').createClient(process.env.REDIS_URL)
-const limiter = require('express-limiter')(app, client)
-const root = path.join(__dirname, 'dist')
+// const client = require('redis').createClient(process.env.REDIS_URL)
+// const limiter = require('express-limiter')(app, client)
+// const root = path.join(__dirname, 'dist')
 const port = process.env.PORT || 3000
 const env = process.env.NODE_ENV || 'development'
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.raw());
+app.use(bodyParser.text());
+
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(helmet())
 
@@ -30,7 +34,7 @@ const limiterOptions = {
 }
 
 app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/dist/index.html')    
+	res.sendFile(__dirname + '/dist/index.html')
 });
 
 app.get('/api/v1/posts', function(req, res) {
