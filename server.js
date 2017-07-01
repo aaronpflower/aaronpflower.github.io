@@ -45,10 +45,7 @@ app.get('/api/v1/posts', function(req, res) {
 	}
 	request(options)
 		.then(response => {
-			res.status(200).json({
-					status: 'success',
-					posts: response.items
-			})
+			res.status(200).json(response.items)
 		})
 		.catch(err => {
 			res.status(500).json({

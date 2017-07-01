@@ -33,6 +33,7 @@ class BlogWrapper extends Component {
   // How to set this innerHTML and sanitize it properly? So it only includes <br />
   // <p className={fonts.smallText} dangerouslySetInnerHTML={{__html: item.content}}></p>
   render() {
+    // console.log(this)
     const { location } = this.props
     const isReader = !!(
       location.state &&
@@ -44,7 +45,7 @@ class BlogWrapper extends Component {
       <div className={classnames(grid.row, styles.container)}>
         <PageHeadline class={grid.row} title={"What I'm Learning"} />
         <Switch location={isReader ? this.previousLocation : location}>
-          <Route exact path='/blog' render={() => <BlogList posts={this.props.store.blog.posts} /> }/>
+          <Route exact path='/blog' render={() => <BlogList blog={this.props.store.blog.posts} /> }/>
         </Switch>
         {isReader ? <Route path='/blog/:id' component={BlogReader} /> : null}
       </div>
