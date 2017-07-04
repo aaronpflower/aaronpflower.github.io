@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import styles from './projectsCard.styles.less'
 import fonts from '../../base/fonts.less'
 import classnames from 'classnames'
@@ -25,6 +27,13 @@ function ProjectCard(props) {
         </div>
       </div>
     )
+}
+
+ProjectCard.PropTypes = {
+  heroImg: PropTypes.string,
+  title: PropTypes.string,
+  stack: PropTypes.string,
+  link: PropTypes.string
 }
 
 export default ProjectCard

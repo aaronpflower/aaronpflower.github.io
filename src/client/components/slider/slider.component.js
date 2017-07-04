@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
 import { CSSTransitionGroup } from 'react-transition-group'
 import styles from './slider.styles.less'
 
@@ -54,4 +56,7 @@ class Slider extends Component {
   }
 }
 
+Slider.PropTypes = {
+  slideShow: PropTypes.array
+}
 export default Slider

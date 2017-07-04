@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import styles from './projectsList.styles.less'
 import classnames from 'classnames'
 import grid from 'flexboxgrid'
@@ -29,6 +31,10 @@ function ProjectsList(props) {
       ))}
     </div>
   )
+}
+
+ProjectsList.PropTypes = {
+  isModal: PropTypes.bool
 }
 
 export default ProjectsList

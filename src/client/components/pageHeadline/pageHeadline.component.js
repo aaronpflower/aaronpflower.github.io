@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import styles from './pageHeadline.styles.less'
 import fonts from '../../base/fonts.less'
 import classnames from 'classnames'
@@ -11,5 +13,10 @@ function PageHeadline (props) {
     </div>
   )
 }
+
+PageHeadline.PropTypes = {
+  title: PropTypes.string
+}
+
 
 export default PageHeadline

@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './loading.styles.less'
 
-// https://codepen.io/42EG4M1/pen/bVMzze
 function Loading(props) {
   return (
   	<div className={styles.loadingText}>

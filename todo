@@ -2,7 +2,6 @@
 - Test in IE
 - Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
 - Add Unit tests
-- Add proptypes to components
 - Add contact form
 - Resize images
 - add readme
@@ -10,3 +9,7 @@
 - site won't load sub pages without going through /
 - combine modal logic
 - minify js and css
+- animated route transitions https://reacttraining.com/react-router/web/example/animated-transitions
+- automate build
+- what is setting innerhtml bad in react?
+- Get rid of console errors

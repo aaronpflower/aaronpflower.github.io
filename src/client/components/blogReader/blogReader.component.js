@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import styles from './blogReader.styles.less'
 import fonts from '../../base/fonts.less'
@@ -35,6 +36,11 @@ class BlogReader extends Component {
       </div>
     )
   }
+}
+
+BlogReader.PropTypes = {
+    title: PropTypes.string,
+    content: PropTypes.string
 }
 
 export default BlogReader

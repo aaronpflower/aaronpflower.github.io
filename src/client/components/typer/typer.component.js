@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
 import TypeWriter from 'react-typewriter'
 import classnames from 'classnames'
 
@@ -21,6 +23,11 @@ class Typer extends Component {
       </div>
     )
   }
+}
+
+Typer.PropTypes = {
+  data: PropTypes.array,
+  onTypingEnd: PropTypes.func
 }
 
 export default Typer;

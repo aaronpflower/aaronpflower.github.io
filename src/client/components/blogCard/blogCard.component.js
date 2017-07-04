@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import styles from './blogCard.styles.less'
 import fonts from '../../base/fonts.less'
 import classnames from 'classnames'
@@ -24,5 +26,14 @@ function BlogCard(props) {
       </div>
     )
 }
+
+BlogCard.PropTypes = {
+  date: PropTypes.string,
+  heroImg: PropTypes.string,
+  title: PropTypes.string,
+  intro: PropTypes.string,
+  link: PropTypes.string
+}
+
 
 export default BlogCard
