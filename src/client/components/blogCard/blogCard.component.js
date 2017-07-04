@@ -17,7 +17,7 @@ function BlogCard(props) {
         </div>
         <div className={styles.cardContent}>
           <p className={classnames(fonts.smallText, styles.date)}>{date}</p>
-          <p className={classnames(fonts.mediumText, styles.cardTitle)}>{props.title}</p>
+          <p className={classnames(fonts.mediumText, fonts.cardTitle)}>{props.title}</p>
           <p className={classnames(fonts.smallText, styles.intro)} dangerouslySetInnerHTML={{__html: props.intro}}></p>
         </div>
         <div className={styles.cardAction}>

@@ -1,15 +1,20 @@
+Now
 - Remove redux explorer from production build
 - Test in IE
 - Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
 - Add Unit tests
-- Add contact form
 - Resize images
-- add readme
 - buy domain
 - site won't load sub pages without going through /
+- Modals won't load if given url with params
 - combine modal logic
-- minify js and css
+- minify css
 - animated route transitions https://reacttraining.com/react-router/web/example/animated-transitions
 - automate build
-- what is setting innerhtml bad in react?
 - Get rid of console errors
+- Add font styles all to fonts.less
+- Add favicon 
+
+Later Time
+- what is setting innerhtml bad in react?
+- Add contact form
