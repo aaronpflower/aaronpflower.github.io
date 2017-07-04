@@ -1,11 +1,111 @@
 @import '../../base/varibles.less';
 
 .container {
-  padding: 10px;
-  box-shadow: @shadowDark;
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: @dark;
+  z-index: 40;
+  transition: opacity .25s ease 0s, visibility linear .35s;
+  opacity: .7;
+  visibility: visible;
+  transition-delay: 0s;
+  transition-duration: .2s, 0s;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 50;
+  text-align: center;
+  visibility: visible;
+  margin: auto;
+  overflow-y: scroll;
+  @media @screen-md {
+    padding-top: 0px;
+    padding-left: ~"calc(60px + 0.5rem)" !important;
+    width: ~"calc(100% - 60px)";
+  }
+}
+
+.modal {
+  text-align: left;
+  margin: auto;
+}
+
+.modalInset {
+  padding: 60px;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  position: relative;
   background-color: @white;
+  box-shadow: 2px 2px 8px 1px rgba(0,0,0,.2);
+  backface-visibility: hidden; // helps render animation
+  transform: translate3d(0,0,0); // helps render animation
+  transform-style: preserve-3d; // helps render animation
+  animation: modalComeIn .25s ease;
+  visibility: visible; /* to keep @ final state */
+}
+
+.back {
+  cursor: pointer;
+  opacity: .4;
+  z-index: 200;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   color: @dark;
-  position: absolute;
-  top: 307px;
-  left: 0px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.modalBody {
+
+  transform: translateY(0) scale(.8, .8);
+  transition-property: opacity, transform;
+  transition-duration: .25s;
+  transition-delay: .1s;
+  opacity: 1;
+  transform: translateY(0) scale(1,1);
+  width: 100%;
+}
+
+@keyframes modalComeIn {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(.8, .8);
+    }
+    65.5% {
+        transform: scale(1.03, 1.03);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes modalHeadOut {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0) scale(1, 1);
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(35px) scale(.97, .97);
+    }
 }

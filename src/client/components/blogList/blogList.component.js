@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import styles from './blogList.styles.less'
 import classnames from 'classnames'
@@ -29,14 +30,15 @@ class BlogList extends Component {
       posts = this.state.posts.map((item, i) => {
         return (
           <Link
-          className={classnames(grid.colXs12, grid.colMd6)}
-          key={item.id}
-          to={{
-            pathname: `/blog/${item.id}`,
-            state: { modal: true }
-          }}
-          >
-          <BlogCard heroImg={item.images[0].url} title={item.title} intro={item.content} date={item.published}/>
+            className={classnames(grid.colXs12, grid.colMd6)}
+            onClick={()=> this.props.onClick(item.id)}
+            key={item.id}
+            to={{
+              pathname: `/blog/${item.id}`,
+              state: { modal: true }
+            }}
+            >
+              <BlogCard heroImg={item.images[0].url} title={item.title} intro={item.content} date={item.published}/>
           </Link>
         )
       })
@@ -50,6 +52,11 @@ class BlogList extends Component {
       </div>
     )
   }
+}
+
+BlogList.PropTypes = {
+  blog: PropTypes.array,
+  onClick: PropTypes.func
 }
 
 export default BlogList

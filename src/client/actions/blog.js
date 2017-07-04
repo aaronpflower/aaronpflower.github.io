@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { GET_POSTS } from './constants'
+import { GET_POSTS, SET_CURRENT_POST } from './constants'
 
 const actions = {
   getPosts() {
@@ -8,7 +8,7 @@ const actions = {
 
             dispatch(Object.assign({}, action, { pending: true }))
 
-            return axios.get('api/v1/posts')
+            return axios.get('/api/v1/posts')
                 .then(res => {
                     dispatch(Object.assign({}, action, { payload: res.data }))
                     return res
@@ -18,6 +18,13 @@ const actions = {
                     throw err
                 })
         }
+  },
+
+  setCurrentPost(current) {
+    const action = { type: SET_CURRENT_POST }
+    return dispatch => {
+      return dispatch(Object.assign({}, action, { current: current }))
+    }
   }
 }
 

@@ -1,8 +1,9 @@
-import { GET_POSTS } from '../actions/constants'
+import { GET_POSTS, SET_CURRENT_POST } from '../actions/constants'
 import createReducer from './createReducer'
 
 const initialState = {
-    posts: []
+    posts: [],
+    current: []
 }
 
 module.exports = createReducer(initialState, {
@@ -10,6 +11,15 @@ module.exports = createReducer(initialState, {
         if (!action.pending && !action.error) {
             return Object.assign({}, ...state, {
                 posts: action.payload
+            })
+        }
+        return state
+    },
+
+    [SET_CURRENT_POST]: (state, action) => {
+        if (!action.pending && !action.error) {
+            return Object.assign({}, state, {
+                current: action.current
             })
         }
         return state

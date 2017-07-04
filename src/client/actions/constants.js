@@ -3,6 +3,7 @@ module.exports = {
   LOADED: "LOADED",
 
   // BLOG
-  GET_POSTS: "GET_POSTS"
+  GET_POSTS: "GET_POSTS",
+  SET_CURRENT_POST: "SET_CURRENT_POST"
 
 }

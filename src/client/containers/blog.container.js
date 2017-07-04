@@ -6,15 +6,30 @@ import fonts from '../base/fonts.less'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
 
-import BlogWrapper from '../components/blogWrapper/blogWrapper.component'
+// import BlogWrapper from '../components/blogWrapper/blogWrapper.component'
+import BlogList from '../components/blogList/blogList.component'
+import BlogReader from '../components/blogReader/blogReader.component'
+import PageHeadline from '../components/pageHeadline/pageHeadline.component'
 
 import { connect } from 'react-redux'
 import mapStateToProps from '../utils/mapStateToProps'
-import { setLoader, getPosts } from '../actions/actions'
+import { setLoader, getPosts, setCurrentPost } from '../actions/actions'
 
 class BlogContainer extends Component {
   constructor(props) {
     super(props)
+    this.previousLocation = null
+    this.handleSetCurrentPost = this.handleSetCurrentPost.bind(this)
+  }
+
+  componentWillUpdate(nextProps) {
+    const { location } = this.props
+    if (
+      nextProps.history.action !== 'POP' &&
+      (!location.state || !location.state.modal)
+    ) {
+      this.previousLocation = this.props.location
+    }
   }
 
   componentWillMount() {
@@ -27,11 +42,29 @@ class BlogContainer extends Component {
     this.props.dispatch(setLoader())
   }
 
+  handleSetCurrentPost(id) {
+    let current = this.props.store.blog.posts.filter((post, i) => {
+      return post.id === id
+    })
+    this.props.dispatch(setCurrentPost(current))
+  }
+
   render() {
+    const { location } = this.props
+    const isReader = !!(
+      location.state &&
+      location.state.modal &&
+      this.previousLocation !== location // not initial render
+    )
+
     return (
-      <Router>
-        <Route component={BlogWrapper} />
-      </Router>
+      <div className={classnames(grid.row, styles.container)}>
+        <PageHeadline class={grid.row} title={"What I'm Learning"} />
+        <Switch location={isReader ? this.previousLocation : location}>
+          <Route exact path='/blog' render={() => <BlogList blog={this.props.store.blog.posts} onClick={this.handleSetCurrentPost} /> } />
+        </Switch>
+        {isReader ? <Route path='/blog/:id' render={() => <BlogReader history={this.props.history} location={location} post={this.props.store.blog.current}/> } /> : null}
+      </div>
     )
   }
 }
