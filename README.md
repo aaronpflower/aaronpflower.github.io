@@ -1,4 +1,4 @@
-[ ![Codeship Status for aaronpflower/aaronpflower.github.io](https://app.codeship.com/projects/6bf89e20-4044-0135-5bb2-72c922dfd1fc/status?branch=master)](https://app.codeship.com/projects/229981)
+[ ![Codeship Status for aaronpflower/aaronpflower.github.io](https://app.codeship.com/projects/6bf89e20-4044-0135-5bb2-72c922dfd1fc/status?branch=blog-integration)](https://app.codeship.com/projects/229981)
 # My Personal Site
 
 ## Live URL
