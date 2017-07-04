@@ -1595,30 +1595,6 @@ p {
   text-align: left;
   color: #0a1821;
 }
-.blog-styles__container__1QXJS > p {
-  padding: 10px;
-}
-/* Palette URL: http://paletton.com/#uid=63v0u0kw0w0jyC+oRxVy4oIDfjr */
-/* Feel free to copy&paste color codes to your application */
-/* MIXINS */
-/* As hex codes */
-/* Main Primary color */
-/* Main Secondary color (1) */
-/* Main Secondary color (2) */
-/* Main Complement color */
-/* As RGBa codes */
-/* Main Primary color */
-/* Main Secondary color (1) */
-/* Main Secondary color (2) */
-/* Main Complement color */
-.blogWrapper-styles__container__28F1w {
-  text-align: left;
-  color: #0a1821;
-  position: relative;
-}
-.blogWrapper-styles__container__28F1w > p {
-  padding: 10px;
-}
 /* Palette URL: http://paletton.com/#uid=63v0u0kw0w0jyC+oRxVy4oIDfjr */
 /* Feel free to copy&paste color codes to your application */
 /* MIXINS */
@@ -1734,13 +1710,152 @@ p {
 /* Main Secondary color (2) */
 /* Main Complement color */
 .blogReader-styles__container__qMmY7 {
-  padding: 10px;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 50;
+  width: 100vw;
+}
+.blogReader-styles__overlay__1KCp2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0a1821;
+  z-index: 40;
+  transition: opacity .25s ease 0s, visibility linear .35s;
+  opacity: .7;
+  visibility: visible;
+  transition-delay: 0s;
+  transition-duration: .2s, 0s;
+}
+.blogReader-styles__wrapper__bj56N {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  text-align: center;
+  visibility: visible;
+  margin: auto;
+  overflow-y: scroll;
+}
+@media only screen and (min-width: 64rem) {
+  .blogReader-styles__wrapper__bj56N {
+    padding-top: 0px;
+    padding-left: calc(60px + 0.5rem) !important;
+    width: calc(100% - 60px);
+  }
+}
+.blogReader-styles__modal__1bbvA {
+  text-align: left;
+  margin: auto;
+}
+.blogReader-styles__modalInset__3lKOm {
+  padding: 60px;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  position: relative;
   background-color: #fff;
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: blogReader-styles__modalComeIn__2_pia .25s ease;
+          animation: blogReader-styles__modalComeIn__2_pia .25s ease;
+  visibility: visible;
+  /* to keep @ final state */
+}
+.blogReader-styles__back__bq-Gj {
+  cursor: pointer;
+  opacity: .4;
+  z-index: 200;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   color: #0a1821;
-  position: absolute;
-  top: 307px;
-  left: 0px;
+}
+.blogReader-styles__back__bq-Gj:hover {
+  opacity: 1;
+}
+.blogReader-styles__modalBody__1SmtN {
+  -webkit-transform: translateY(0) scale(0.8, 0.8);
+          transform: translateY(0) scale(0.8, 0.8);
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  transition-duration: .25s;
+  transition-delay: .1s;
+  opacity: 1;
+  -webkit-transform: translateY(0) scale(1, 1);
+          transform: translateY(0) scale(1, 1);
+  width: 100%;
+}
+@-webkit-keyframes blogReader-styles__modalComeIn__2_pia {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  65.5% {
+    -webkit-transform: scale(1.03, 1.03);
+            transform: scale(1.03, 1.03);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@keyframes blogReader-styles__modalComeIn__2_pia {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.8, 0.8);
+            transform: scale(0.8, 0.8);
+  }
+  65.5% {
+    -webkit-transform: scale(1.03, 1.03);
+            transform: scale(1.03, 1.03);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes blogReader-styles__modalHeadOut__oqE27 {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1, 1);
+            transform: translateY(0) scale(1, 1);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(35px) scale(0.97, 0.97);
+            transform: translateY(35px) scale(0.97, 0.97);
+  }
+}
+@keyframes blogReader-styles__modalHeadOut__oqE27 {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0) scale(1, 1);
+            transform: translateY(0) scale(1, 1);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: translateY(35px) scale(0.97, 0.97);
+            transform: translateY(35px) scale(0.97, 0.97);
+  }
 }
 /* Palette URL: http://paletton.com/#uid=63v0u0kw0w0jyC+oRxVy4oIDfjr */
 /* Feel free to copy&paste color codes to your application */
@@ -1952,4 +2067,4 @@ p {
   transition: opacity 0.5s ease-in;
 }
 
-/*# sourceMappingURL=main.66552726da917e6eab755e882b288957.css.map*/
+/*# sourceMappingURL=main.50455063bf46abad69472dfc7700bdf7.css.map*/
