@@ -1,14 +1,13 @@
 * Currently
-- redirect master (gh-pages) to point to window.location = "http://www.aaronpflower.com";
-
-* High
-- site won't load sub pages without going through /
-- Modals won't load if given url with params
-- setup SSL
 - image modal arrows make white and hover like on FB
 - new images with screen shot tool in dev tools chrome
 - Resize images
-- Clean up fonts.less
+
+* High
+- redirect master (gh-pages) to point to window.location = "http://www.aaronpflower.com";
+- site won't load sub pages without going through /
+- Modals won't load if given url with params
+- setup SSL
 
 * Medium
 - minify css

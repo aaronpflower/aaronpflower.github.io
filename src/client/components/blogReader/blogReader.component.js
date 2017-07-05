@@ -24,7 +24,7 @@ class BlogReader extends Component {
         <div className={classnames(grid.colXs12, grid.colMd8, styles.wrapper)}>
           <div className={classnames(grid.row, styles.modal)}>
             <div className={classnames(grid.colXs12, styles.modalInset)}>
-              <a onClick={this.back} className={classnames(grid.colXs12, styles.back, icons.fa, icons.faLongArrowLeft)}><span className={fonts.smallText}>Back</span></a>
+              <a onClick={this.back} className={classnames(grid.colXs12, styles.back, icons.fa, icons.faLongArrowLeft)}><span className={classnames(styles.backText, fonts.smallText)}>Back</span></a>
               <div className={classnames(styles.content, grid.colXs12)}>
                 <p className={fonts.modalHeader}>{this.props.post[0].title}</p>
                 <p className={fonts.modalParagraph} dangerouslySetInnerHTML={{__html: this.props.post[0].content}}></p>
