@@ -1,6 +1,5 @@
 * Currently
 - redirect master (gh-pages) to point to window.location = "http://www.aaronpflower.com";
-- Add favicon
 
 * High
 - site won't load sub pages without going through /
