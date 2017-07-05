@@ -45,9 +45,9 @@
 }
 
 .modalInset {
-  padding: 60px;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
+  padding: 20px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   position: relative;
   background-color: @white;
   box-shadow: 2px 2px 8px 1px rgba(0,0,0,.2);
@@ -56,6 +56,11 @@
   transform-style: preserve-3d; // helps render animation
   animation: modalComeIn .25s ease;
   visibility: visible; /* to keep @ final state */
+  @media @screen-md {
+    padding: 60px;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
 }
 
 .back {
@@ -68,6 +73,10 @@
   &:hover {
     opacity: 1;
   }
+}
+
+.backText {
+  margin-left: 5px;
 }
 
 .modalBody {

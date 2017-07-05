@@ -24,6 +24,7 @@ app.use(bodyParser.text());
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(helmet())
 app.use(favicon(__dirname + '/favicon.ico'));
+console.log('dir', __dirname)
 
 const limiterOptions = {
 	lookup: 'connection.remoteAddress',

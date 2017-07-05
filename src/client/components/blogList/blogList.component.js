@@ -26,19 +26,30 @@ class BlogList extends Component {
 
   render () {
     let posts
-    if (this.state.posts != null) {
+    if (this.state.posts === null || this.state.posts.length < 1) {
+      posts = (
+        <div className={styles.wrapper}>
+        <h2 className={fonts.smallText}>Check back soon!</h2>
+        <p className={fonts.smallText}>• Topics may include...</p>
+        <p className={fonts.smallText}>• Javascript development: OOP the JS way, Functional JS Programming</p>
+        <p className={fonts.smallText}>• What core CS topics im learning</p>
+        <p className={fonts.smallText}>• Web App Performance</p>
+        <p className={fonts.smallText}>• And much more!</p>
+        </div>
+      )
+    } else {
       posts = this.state.posts.map((item, i) => {
         return (
           <Link
-            className={classnames(grid.colXs12, grid.colMd6)}
-            onClick={()=> this.props.onClick(item.id)}
-            key={item.id}
-            to={{
-              pathname: `/blog/${item.id}`,
-              state: { modal: true }
-            }}
-            >
-              <BlogCard heroImg={item.images[0].url} title={item.title} intro={item.content} date={item.published}/>
+          className={classnames(grid.colXs12, grid.colMd6)}
+          onClick={()=> this.props.onClick(item.id)}
+          key={item.id}
+          to={{
+            pathname: `/blog/${item.id}`,
+            state: { modal: true }
+          }}
+          >
+          <BlogCard heroImg={item.images[0].url} title={item.title} intro={item.content} date={item.published}/>
           </Link>
         )
       })

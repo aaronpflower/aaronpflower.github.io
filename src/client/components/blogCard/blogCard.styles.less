@@ -6,7 +6,7 @@
   position: relative;
   margin: .5rem 0 1rem 0;
   background-color: #fff;
-  transition: box-shadow .25s;
+  box-shadow: @shadowDark;
   border-radius: 2px;
   background-color: #fff;
   transform: scale(1);
@@ -38,29 +38,21 @@
 .cardContent {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 24px;
   border-radius: 0 0 2px 2px;
   text-align: left;
 }
 
-.cardAction {
-  text-align: left;
-  position: relative;
-  background-color: inherit;
-  padding: 16px 24px;
-  border-radius: 0 0 2px 2px;
-}
-
-.cardAction a {
-  color: @dark;
+.title, .date {
+  margin-bottom: 15px;
 }
 
 .intro {
-  display: -webkit-box!important;
   color: @dark;
   line-height: 1.4;
-  max-height: 4.2em;
-  -webkit-line-clamp: 3!important;
-  overflow: hidden;
+  max-height: 3em;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

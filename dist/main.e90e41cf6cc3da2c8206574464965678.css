@@ -231,7 +231,7 @@ p {
   margin-bottom: 10px;
   text-transform: uppercase;
   font-size: 3rem;
-  line-height: 6.3rem;
+  line-height: 1;
   letter-spacing: 2px;
   text-align: center;
   font-weight: normal;
@@ -275,6 +275,19 @@ p {
     font-size: 2.5em;
   }
 }
+.fonts__mediumTextBold__3aG6e {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  line-height: 1;
+  text-decoration: none;
+  letter-spacing: .05em;
+}
+@media only screen and (min-width: 64rem) {
+  .fonts__mediumTextBold__3aG6e {
+    font-size: 2.5em;
+  }
+}
 .fonts__modalHeader__1N2GM {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.5em;
@@ -290,10 +303,16 @@ p {
 }
 .fonts__smallText__2CJgk {
   font-family: 'Roboto Condensed', sans-serif;
-  font-style: normal;
   font-weight: normal;
   font-size: .8em;
-  line-height: 19px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+.fonts__smallTextBold__9-l9j {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bolder;
+  font-size: .8em;
+  line-height: 1;
   letter-spacing: 0.1em;
 }
 .fonts__smallParagraph__rrn04 {
@@ -320,7 +339,6 @@ p {
 @media only screen and (min-width: 64rem) {
   .fonts__modalParagraph__dyq_F {
     font-size: 1em;
-    padding-left: 10px;
   }
 }
 .fonts__code__1mPwE {
@@ -337,11 +355,8 @@ p {
   line-height: 23px;
   text-transform: uppercase;
 }
-.fonts__cardTitle__Jzuf_ {
-  text-align: left;
-  font-weight: bolder;
-  font-size: 2em;
-  line-height: 1;
+.fonts__toUpper__2sIbL {
+  text-transform: uppercase;
 }
 /* Palette URL: http://paletton.com/#uid=63v0u0kw0w0jyC+oRxVy4oIDfjr */
 /* Feel free to copy&paste color codes to your application */
@@ -513,12 +528,11 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  left: -42px;
   -webkit-transform: translate3d(0, -130px, 0);
           transform: translate3d(0, -130px, 0);
   display: block;
+  left: -3px;
   position: relative;
-  text-align: center;
   text-transform: uppercase;
   -webkit-animation: home-main__bouncedWord__2hxa8 2s;
           animation: home-main__bouncedWord__2hxa8 2s;
@@ -529,7 +543,7 @@ p {
 }
 @media only screen and (min-width: 64rem) {
   .home-main__lastName__1wseM {
-    left: -10px;
+    left: -7px;
     -webkit-transform: translate3d(0, -330px, 0);
             transform: translate3d(0, -330px, 0);
   }
@@ -813,7 +827,7 @@ p {
   width: 100%;
   height: 100px;
   position: fixed;
-  top: -175px;
+  top: -185px;
   bottom: 0px;
   left: 0px;
   right: 0px;
@@ -821,6 +835,7 @@ p {
   margin: auto;
   text-align: center;
   color: #FF8E00;
+  font-size: 1.5em;
 }
 .loading-styles__loadingText__2vZJK span {
   color: #FF8E00 !important;
@@ -1078,6 +1093,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  width: 100%;
 }
 .pageHeadline-styles__underline__3qd7N {
   width: 140px;
@@ -1567,7 +1584,6 @@ p {
 /* Main Secondary color (2) */
 /* Main Complement color */
 .blog-styles__container__1QXJS {
-  text-align: left;
   color: #0a1821;
 }
 /* Palette URL: http://paletton.com/#uid=63v0u0kw0w0jyC+oRxVy4oIDfjr */
@@ -1588,6 +1604,24 @@ p {
   margin-right: 0rem !important;
   margin-left: 0rem !important;
 }
+.blogList-styles__wrapper__KAB9J {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+  color: #0a1821;
+}
+.blogList-styles__wrapper__KAB9J > p {
+  padding: 10px 0px;
+}
 /* Palette URL: http://paletton.com/#uid=63v0u0kw0w0jyC+oRxVy4oIDfjr */
 /* Feel free to copy&paste color codes to your application */
 /* MIXINS */
@@ -1606,7 +1640,7 @@ p {
   color: #0a1821;
   position: relative;
   margin: .5rem 0 1rem 0;
-  transition: box-shadow 0.25s;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
   border-radius: 2px;
   background-color: #fff;
   -webkit-transform: scale(1);
@@ -1641,28 +1675,23 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 24px;
   border-radius: 0 0 2px 2px;
   text-align: left;
 }
-.blogCard-styles__cardAction__12aY3 {
-  text-align: left;
-  position: relative;
-  background-color: inherit;
-  padding: 16px 24px;
-  border-radius: 0 0 2px 2px;
-}
-.blogCard-styles__cardAction__12aY3 a {
-  color: #0a1821;
+.blogCard-styles__title__3-g3p,
+.blogCard-styles__date__82z0C {
+  margin-bottom: 15px;
 }
 .blogCard-styles__intro__3gHUo {
-  display: -webkit-box !important;
   color: #0a1821;
   line-height: 1.4;
-  max-height: 4.2em;
-  -webkit-line-clamp: 3!important;
-  overflow: hidden;
+  max-height: 3em;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 /* Palette URL: http://paletton.com/#uid=63v0u0kw0w0jyC+oRxVy4oIDfjr */
 /* Feel free to copy&paste color codes to your application */
@@ -1720,9 +1749,9 @@ p {
   margin: auto;
 }
 .blogReader-styles__modalInset__3lKOm {
-  padding: 60px;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
+  padding: 20px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   position: relative;
   background-color: #fff;
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
@@ -1737,6 +1766,13 @@ p {
   visibility: visible;
   /* to keep @ final state */
 }
+@media only screen and (min-width: 64rem) {
+  .blogReader-styles__modalInset__3lKOm {
+    padding: 60px;
+    padding-left: 60px !important;
+    padding-right: 60px !important;
+  }
+}
 .blogReader-styles__back__bq-Gj {
   cursor: pointer;
   opacity: .4;
@@ -1747,6 +1783,9 @@ p {
 }
 .blogReader-styles__back__bq-Gj:hover {
   opacity: 1;
+}
+.blogReader-styles__backText__1vUQk {
+  margin-left: 5px;
 }
 .blogReader-styles__modalBody__1SmtN {
   -webkit-transform: translateY(0) scale(0.8, 0.8);
@@ -2035,4 +2074,4 @@ p {
   transition: opacity 0.5s ease-in;
 }
 
-/*# sourceMappingURL=main.3ec867625043962f93e6564c8d025608.css.map*/
+/*# sourceMappingURL=main.e90e41cf6cc3da2c8206574464965678.css.map*/

@@ -6,7 +6,6 @@ import fonts from '../base/fonts.less'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
 
-// import BlogWrapper from '../components/blogWrapper/blogWrapper.component'
 import BlogList from '../components/blogList/blogList.component'
 import BlogReader from '../components/blogReader/blogReader.component'
 import PageHeadline from '../components/pageHeadline/pageHeadline.component'
@@ -59,7 +58,7 @@ class BlogContainer extends Component {
 
     return (
       <div className={classnames(grid.row, styles.container)}>
-        <PageHeadline class={grid.row} title={"What I'm Learning"} />
+        <PageHeadline title={"What I'm Learning"} />
         <Switch location={isReader ? this.previousLocation : location}>
           <Route exact path='/blog' render={() => <BlogList blog={this.props.store.blog.posts} onClick={this.handleSetCurrentPost} /> } />
         </Switch>
