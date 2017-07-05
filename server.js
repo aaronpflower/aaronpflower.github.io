@@ -6,6 +6,7 @@ const bodyParser = require("body-parser")
 const path = require('path')
 const express = require('express')
 const app = express()
+const favicon = require('serve-favicon');
 
 const request = require('request-promise')
 const helmet = require('helmet')
@@ -22,6 +23,7 @@ app.use(bodyParser.text());
 
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(helmet())
+app.use(favicon(__dirname + '/favicon.ico'));
 
 const limiterOptions = {
 	lookup: 'connection.remoteAddress',

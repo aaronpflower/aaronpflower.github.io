@@ -31,7 +31,6 @@ class PortfolioContainer extends Component {
 
   render() {
     const { location } = this.props
-    console.log(this)
     const isModal = !!(
       location.state &&
       location.state.modal &&

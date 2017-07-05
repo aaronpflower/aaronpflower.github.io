@@ -2,7 +2,8 @@
 # My Personal Site
 
 ## Live URL
-https://aaronpflower.herokuapp.com/
+aaronpflower.com
+aaronpflower.github.io (master branch redirects to aaronpflower.com now)
 
 ### Development
 1. install yarn: https://yarnpkg.com/en/docs/install
@@ -16,7 +17,7 @@ https://aaronpflower.herokuapp.com/
 
 ### Production/Deployment to Heroku
 
- 1. `npm run build`
+1. `npm run build`
 2. commit changes
 2. `git push`
 3. Codeship takes care of CI
