@@ -1,13 +1,14 @@
 * Currently
+- redirect master (gh-pages) to point to window.location = "http://www.aaronpflower.com";
+- once main post is done change placeholder text on blog to <loading />
+
+* High
+- Fonts
 - image modal arrows make white and hover like on FB
 - new images with screen shot tool in dev tools chrome
 - Resize images
-
-* High
-- redirect master (gh-pages) to point to window.location = "http://www.aaronpflower.com";
 - site won't load sub pages without going through /
 - Modals won't load if given url with params
-- setup SSL
 
 * Medium
 - minify css
@@ -15,13 +16,18 @@
 - Add Unit tests
 - Img component using aspect ratio mixin as a prop
 
+- Figure out how not to use setInnerHTML with react and blogger
+
 * Low
+- figure out how to imbed gists with blogger
 - Remove redux explorer from production build
 - Test in IE
 - combine modal logic
 - animated route transitions https://reacttraining.com/react-router/web/example/animated-transitions
 - automate build
 - Get rid of console errors
-- what is setting innerhtml bad in react?
+- Add Google Analitics to track traffic
+- Inhance SEO
+
 - Add contact form
-- add sorting logic to blog
+- Add sorting logic to blog

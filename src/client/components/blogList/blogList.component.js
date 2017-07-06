@@ -9,6 +9,7 @@ import fonts from '../../base/fonts.less'
 import { Link } from 'react-router-dom'
 
 import BlogCard from '../blogCard/blogCard.component'
+import Loader from '../loader/loading.component'
 
 class BlogList extends Component {
   constructor(props) {
@@ -27,16 +28,7 @@ class BlogList extends Component {
   render () {
     let posts
     if (this.state.posts === null || this.state.posts.length < 1) {
-      posts = (
-        <div className={styles.wrapper}>
-        <h2 className={fonts.smallText}>Check back soon!</h2>
-        <p className={fonts.smallText}>• Topics may include...</p>
-        <p className={fonts.smallText}>• Javascript development: OOP the JS way, Functional JS Programming</p>
-        <p className={fonts.smallText}>• What core CS topics im learning</p>
-        <p className={fonts.smallText}>• Web App Performance</p>
-        <p className={fonts.smallText}>• And much more!</p>
-        </div>
-      )
+      posts = <Loader />
     } else {
       posts = this.state.posts.map((item, i) => {
         return (
