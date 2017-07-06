@@ -20,6 +20,12 @@
 .fourThree {
   .aspectRatio(4, 3);
   box-shadow: @shadowDark;
+  position: relative;
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+  }
 }
 
 .container {
@@ -48,9 +54,37 @@
   bottom: 0;
 }
 
+
+.overlay {
+  top: 0;
+  z-index: 1;
+  color: rgba(255, 255, 255, .3);
+  font-size: 12px;
+  width: 50px;
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.overlayLeft {
+  background: linear-gradient(to left, transparent, rgba(0, 0, 0, .3));
+  left: 0;
+}
+
+.overlayRight {
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, .3));
+  right: 0;
+}
+
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
   background-position: center;
   background-repeat: no-repeat;
   height: 40px;

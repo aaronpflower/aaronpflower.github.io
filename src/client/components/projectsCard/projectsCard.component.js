@@ -15,7 +15,7 @@ function ProjectCard(props) {
       <div className={styles.container}>
         <div className={styles.imgContainer}>
           <img className={styles.cardImg} src={props.heroImg} />
-          <span className={styles.cardTitle}>{props.title}</span>
+          <span className={classnames(fonts.smallTextBold, fonts.toUpper, styles.cardTitle)}>{props.title}</span>
         </div>
         <div className={styles.cardContent}>
           <span className={classnames(icons.fa, icons.faWrench, styles.wrench)}></span>

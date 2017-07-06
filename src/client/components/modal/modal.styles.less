@@ -57,8 +57,8 @@
   top: 10px;
   right: 10px;
   padding: 10px;
-  height: 8px;
-  width: 8px;
+  height: 5px;
+  width: 5px;
   opacity: .4;
   z-index: 200;
   &:hover {
@@ -66,21 +66,23 @@
   }
 }
 
-.title {
-  text-align: center !important;
-  margin-bottom: 46px;
+.spacer {
+  margin-bottom: 15px;
 }
 
 .modalBody {
-  padding: 60px;
-  padding-left: 60px !important;
-  padding-right: 60px !important;
   transform: translateY(0) scale(.8, .8);
   transition-property: opacity, transform;
   transition-duration: .25s;
   transition-delay: .1s;
   opacity: 1;
   transform: translateY(0) scale(1,1);
+}
+
+.content {
+  padding: 16px;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
 }
 
 @keyframes modalComeIn {
