@@ -24,14 +24,14 @@ const Modal = ({ match, history }) => {
           <div className={classnames(grid.row, styles.modalInset)}>
             <div className={styles.close} onClick={back}></div>
             <div className={classnames(grid.colXs12, styles.modalBody)}>
-              <h2 className={classnames(grid.row, fonts.mediumText, styles.title)}>{project.title}</h2>
               <div className={grid.row}>
                 <Slider class={classnames(grid.colXs12, grid.colMd8)} slideShow={project.slideShow} />
-                <div className={classnames(grid.colXs12, grid.colMd4)}>
-                  <h2 className={fonts.modalHeader}>Overview:</h2>
-                  <p className={fonts.modalParagraph}>{project.overview}</p>
-                  <h2 className={fonts.modalHeader}>Contributions:</h2>
-                  <p className={fonts.modalParagraph}>{project.contributions}</p>
+                <div className={classnames(styles.content, grid.colXs12, grid.colMd4)}>
+                  <h2 className={classnames(fonts.mediumModalBold, fonts.toUpper, styles.spacer)}>{project.title}</h2>
+                  <h2 className={classnames(fonts.smallTextBold, fonts.toUpper, styles.spacer)}>Overview:</h2>
+                  <p className={classnames(styles.spacer, fonts.smallText)}>{project.overview}</p>
+                  <h2 className={classnames(fonts.smallTextBold, fonts.toUpper, styles.spacer)}>Contributions:</h2>
+                  <p className={fonts.smallText}>{project.contributions}</p>
                 </div>
               </div>
             </div>

@@ -36,9 +36,9 @@ class About extends Component {
       return (
         <li className={classnames(styles.listItem, grid.colXs12)} key={i}>
           <div className={classnames(this.state.inView && styles.inView, styles.itemContent, grid.row)}>
-            <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.title)}>{item.title}</p>
+            <p className={classnames(grid.colXs12, fonts.mediumTextBold, styles.title)}>{item.title}</p>
             <TriColoredBars />
-            <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.date)}>{item.date}</p>
+            <p className={classnames(grid.colXs12, fonts.smallParagraph, fonts.toUpper, styles.date)}>{item.date}</p>
             <p className={classnames(grid.colXs12, fonts.smallParagraph, styles.summary)}>{item.summary}</p>
           </div>
         </li>

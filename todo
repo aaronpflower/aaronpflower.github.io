@@ -1,9 +1,8 @@
 * Currently
-- redirect master (gh-pages) to point to window.location = "http://www.aaronpflower.com";
-- once main post is done change placeholder text on blog to <loading />
+- Fonts
 
 * High
-- Fonts
+- Update Resume
 - image modal arrows make white and hover like on FB
 - new images with screen shot tool in dev tools chrome
 - Resize images
@@ -20,11 +19,11 @@
 
 * Low
 - figure out how to imbed gists with blogger
+- automate build process
 - Remove redux explorer from production build
 - Test in IE
 - combine modal logic
 - animated route transitions https://reacttraining.com/react-router/web/example/animated-transitions
-- automate build
 - Get rid of console errors
 - Add Google Analitics to track traffic
 - Inhance SEO
