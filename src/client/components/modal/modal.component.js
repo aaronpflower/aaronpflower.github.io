@@ -5,6 +5,8 @@ import styles from './modal.styles.less'
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
 import fonts from '../../base/fonts.less'
+import icons from 'font-awesome/css/font-awesome.css'
+
 
 import Slider from '../slider/slider.component'
 
@@ -22,12 +24,16 @@ const Modal = ({ match, history }) => {
       <div className={classnames(grid.row, styles.container)}>
         <div className={classnames(grid.colXs12, grid.colMd8, styles.modal)}>
           <div className={classnames(grid.row, styles.modalInset)}>
-            <div className={styles.close} onClick={back}></div>
             <div className={classnames(grid.colXs12, styles.modalBody)}>
               <div className={grid.row}>
+                <div className={classnames(grid.colXs12, styles.header)}>
+                  <div className={classnames(grid.row, grid.middleXs, styles.closeWrapper)}>
+                    <span onClick={back} className={classnames(icons.fa, icons.faArrowLeft, styles.close)}></span>
+                    <h2 className={classnames(grid.colXs12,fonts.mediumModalBold, fonts.toUpper, fonts.center)}>{project.title}</h2>
+                  </div>
+                </div>
                 <Slider class={classnames(grid.colXs12, grid.colMd8)} slideShow={project.slideShow} />
                 <div className={classnames(styles.content, grid.colXs12, grid.colMd4)}>
-                  <h2 className={classnames(fonts.mediumModalBold, fonts.toUpper, styles.spacer)}>{project.title}</h2>
                   <h2 className={classnames(fonts.smallTextBold, fonts.toUpper, styles.spacer)}>Overview:</h2>
                   <p className={classnames(styles.spacer, fonts.smallText)}>{project.overview}</p>
                   <h2 className={classnames(fonts.smallTextBold, fonts.toUpper, styles.spacer)}>Contributions:</h2>
