@@ -1,9 +1,9 @@
 * Currently
-- Fonts
+- mobile/tablet≠ modal ui/ux
 
 * High
 - Update Resume
-- image modal arrows make white and hover like on FB
+- mobile lines bg messed up iphone
 - new images with screen shot tool in dev tools chrome
 - Resize images
 - site won't load sub pages without going through /
@@ -14,10 +14,11 @@
 - Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
 - Add Unit tests
 - Img component using aspect ratio mixin as a prop
-
 - Figure out how not to use setInnerHTML with react and blogger
+- blog reader make like project modal
 
 * Low
+- Tablet size screen UI/UX
 - figure out how to imbed gists with blogger
 - automate build process
 - Remove redux explorer from production build
