@@ -22,7 +22,7 @@ const Modal = ({ match, history }) => {
   return (
     <div>
       <div className={classnames(grid.row, styles.container)}>
-        <div className={classnames(grid.colXs12, grid.colMd8, styles.modal)}>
+        <div className={classnames(grid.colXs12, grid.colSm8, styles.modal)}>
           <div className={classnames(grid.row, styles.modalInset)}>
             <div className={classnames(grid.colXs12, styles.modalBody)}>
               <div className={grid.row}>
@@ -32,8 +32,8 @@ const Modal = ({ match, history }) => {
                     <h2 className={classnames(grid.colXs12,fonts.mediumModalBold, fonts.toUpper, fonts.center)}>{project.title}</h2>
                   </div>
                 </div>
-                <Slider class={classnames(grid.colXs12, grid.colMd8)} slideShow={project.slideShow} />
-                <div className={classnames(styles.content, grid.colXs12, grid.colMd4)}>
+                <Slider class={classnames(grid.colXs12, grid.colSm8)} slideShow={project.slideShow} />
+                <div className={classnames(styles.content, grid.colXs12, grid.colSm4)}>
                   <h2 className={classnames(fonts.smallTextBold, fonts.toUpper, styles.spacer)}>Overview:</h2>
                   <p className={classnames(styles.spacer, fonts.smallText)}>{project.overview}</p>
                   <h2 className={classnames(fonts.smallTextBold, fonts.toUpper, styles.spacer)}>Contributions:</h2>

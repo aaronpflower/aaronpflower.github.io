@@ -13,7 +13,7 @@
   transition-delay: 0s;
   transition-duration: .2s, 0s;
   display: none;
-  @media @screen-md {
+  @media @screen-sm {
     display: block;
     background-color: @dark;
     opacity: .7;
@@ -33,7 +33,9 @@
   height: 100vh;
   margin-right: 0rem !important;
   margin-left: 0rem !important;
-  @media @screen-md {
+  overflow-y: scroll;
+  // height: 100%;
+  @media @screen-sm {
     justify-content: center;
     align-items: center;
     width: auto;
@@ -69,7 +71,7 @@
   visibility: visible; /* to keep @ final state */
   overflow-y: scroll;
   height: 100%;
-  @media @screen-md {
+  @media @screen-sm {
     box-shadow: 2px 2px 8px 1px rgba(0,0,0,.2);
     position: relative;
     height: auto;
