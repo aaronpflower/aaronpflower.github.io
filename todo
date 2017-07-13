@@ -1,15 +1,16 @@
 * Currently
-- mobile/tablet≠ modal ui/ux
+- Update Resume
+- blog reader scroll on mobile
+- nav close after clicking
 
 * High
-- Update Resume
-- mobile lines bg messed up iphone
 - new images with screen shot tool in dev tools chrome
 - Resize images
 - site won't load sub pages without going through /
 - Modals won't load if given url with params
 
 * Medium
+- mobile lines bg messed up iphone
 - minify css
 - Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
 - Add Unit tests

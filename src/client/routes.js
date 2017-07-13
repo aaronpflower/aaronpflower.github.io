@@ -21,14 +21,14 @@ const Routes = () => (
   <Provider store={store}>
     <Router>
       <div className={classnames(grid.row, styles.mainWrapper)}>
-        <div className={classnames(grid.colXs8, styles.content)}>
+        <div className={classnames(grid.colXs10, grid.colMd8, styles.content)}>
           <Header/>
           <Route exact path="/" component={Home}/>
           <Route path="/about" component={About}/>
           <Route path="/portfolio" component={Portfolio}/>
           <Route path="/blog" component={Blog}/>
         </div>
-        <div className={classnames(grid.colXs12, styles.lines)}>
+        <div className={classnames(grid.colXs10, grid.colMd12, styles.lines)}>
           <div className={classnames(grid.row, grid.betweenXs, styles.lineRow)}>
             <div className={styles.line}></div>
             <div className={styles.line}></div>
