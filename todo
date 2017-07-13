@@ -1,14 +1,12 @@
 * Currently
-- nav close after clicking
+- Modals won't load if given url with params
 
 * High
 - new images with screen shot tool in dev tools chrome
 - Resize images
 - site won't load sub pages without going through /
-- Modals won't load if given url with params
 
 * Medium
-- mobile lines bg messed up iphone
 - minify css
 - Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
 - Add Unit tests
@@ -27,6 +25,6 @@
 - Get rid of console errors
 - Add Google Analitics to track traffic
 - Inhance SEO
-
 - Add contact form
 - Add sorting logic to blog
+- Add redis to cache blog posts

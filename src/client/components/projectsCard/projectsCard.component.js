@@ -17,14 +17,12 @@ function ProjectCard(props) {
           <img className={styles.cardImg} src={props.heroImg} />
           <span className={classnames(fonts.smallTextBold, fonts.toUpper, styles.cardTitle)}>{props.title}</span>
         </div>
+        <TriColoredBars />
         <div className={styles.cardContent}>
           <span className={classnames(icons.fa, icons.faWrench, styles.wrench)}></span>
           <p className={classnames(fonts.smallText, styles.stack)} dangerouslySetInnerHTML={{__html: props.stack}}></p>
         </div>
-        <TriColoredBars />
-        <div className={styles.cardAction}>
-          {props.link ? <a className={fonts.smallText} href={props.link}>Live Url</a> : null}
-        </div>
+
       </div>
     )
 }
