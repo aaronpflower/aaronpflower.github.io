@@ -19,6 +19,7 @@ const Modal = ({ match, history }) => {
     e.stopPropagation()
     history.goBack()
   }
+  console.log(project)
   return (
     <div>
       <div className={classnames(grid.row, styles.container)}>
@@ -37,7 +38,8 @@ const Modal = ({ match, history }) => {
                   <h2 className={classnames(fonts.smallTextBold, fonts.toUpper, styles.spacer)}>Overview:</h2>
                   <p className={classnames(styles.spacer, fonts.smallText)}>{project.overview}</p>
                   <h2 className={classnames(fonts.smallTextBold, fonts.toUpper, styles.spacer)}>Contributions:</h2>
-                  <p className={fonts.smallText}>{project.contributions}</p>
+                  <p className={classnames(styles.spacer, fonts.smallText)}>{project.contributions}</p>
+                  {project.liveUrl ? <a className={fonts.smallText} target="_blank" href={project.liveUrl}>Live Url</a> : null}
                 </div>
               </div>
             </div>
