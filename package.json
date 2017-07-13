@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal Site",
   "engines": {
-    "node": "7.10.0"
+    "node": "7.10.1"
   },
   "scripts": {
     "start": "npm run build && NODE_ENV=production node ./server.js",
