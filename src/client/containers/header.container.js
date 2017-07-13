@@ -8,7 +8,6 @@ import Nav from '../components/nav/nav.component'
 
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
-import { CSSTransitionGroup } from 'react-transition-group'
 import icons from 'font-awesome/css/font-awesome.css'
 import styles from './header.styles.less'
 
@@ -22,6 +21,7 @@ class Header extends Component {
   }
 
   toggleMenu() {
+    console.log('here')
     if(this.state.navOpen === false) {
       this.setState({
         navOpen: true
@@ -34,17 +34,17 @@ class Header extends Component {
   }
 
   render() {
-    let nav = null
-
-    if (this.state.navOpen && window.innerWidth < 1024) {
-      nav = <Nav />
-    }
-    else if (!this.state.navOpen && window.innerWidth < 1024) {
-      nav = null
-    }
-    else if (window.innerWidth > 1024) {
-      nav = <Nav />
-    }
+    // let nav = null
+    //
+    // if (this.state.navOpen && window.innerWidth < 1024) {
+    //   nav = <Nav />
+    // }
+    // else if (!this.state.navOpen && window.innerWidth < 1024) {
+    //   nav = null
+    // }
+    // else if (window.innerWidth > 1024) {
+    //   nav = <Nav />
+    // }
 
     return (
       <header className={classnames(!this.props.store.loader.loaded && styles.loading, styles.header)}>
@@ -52,12 +52,7 @@ class Header extends Component {
           <Link to="/" className={classnames(styles.logo)}></Link>
           <i onClick={this.toggleMenu} className={classnames(icons.fa, icons.faBars, styles.mobileBars)}/>
         </div>
-        <CSSTransitionGroup
-          transitionName={styles}
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
-          {nav}
-        </CSSTransitionGroup>
+        <Nav navOpen={this.state.navOpen} onClick={this.toggleMenu} />
         <div className={classnames(styles.social)}>
           <a href="https://github.com/aaronpflower" target="_blank">
             <i className={classnames(icons.fa, icons.faGithubAlt, styles.icons)}/>
