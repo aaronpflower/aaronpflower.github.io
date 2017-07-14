@@ -37,7 +37,7 @@ const limiterOptions = {
 }
 
 app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/dist/index.html')
+	res.sendFile(path.join(__dirname, 'dist'))
 });
 
 app.get('/api/v1/posts', function(req, res) {
