@@ -41,8 +41,8 @@ module.exports = {
         },
         contentBase: './dist',
         compress: true,
-        port: 3001,
-        historyApiFallback: true
+        port: 3001
+
     },
 
     module: {

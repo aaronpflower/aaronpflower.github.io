@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, HashRouter, Switch, Route, Link } from 'react-router-dom'
 
 import grid from 'flexboxgrid'
 import classnames from 'classnames'
@@ -42,28 +42,10 @@ class PortfolioContainer extends Component {
         <Switch location={isModal ? this.previousLocation : location}>
           <Route exact path='/portfolio' render={() => <ProjectsList isModal={isModal} /> }/>
         </Switch>
-        {isModal ? <Route path='/project/:id' component={Modal} /> : null}
+        {isModal ? <Route path='/portfolio/:id' component={Modal} /> : null}
       </div>
     )
   }
 }
 
-class PortfolioGallery extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  componentDidMount() {
-    this.props.dispatch(setLoader())
-  }
-
-  render() {
-    return (
-      <Router>
-        <Route component={PortfolioContainer} />
-      </Router>
-    )
-  }
-}
-
-export default connect(mapStateToProps)(PortfolioGallery)
+export default connect(mapStateToProps)(PortfolioContainer)

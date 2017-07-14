@@ -22,7 +22,7 @@ function ProjectsList(props) {
           className={classnames(grid.colXs12, grid.colMd4)}
           key={i.id}
           to={{
-            pathname: `/project/${i.id}`,
+            pathname: `/portfolio/${i.id}`,
             state: { modal: true }
           }}
         >
