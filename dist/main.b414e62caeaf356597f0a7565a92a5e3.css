@@ -327,8 +327,8 @@ p {
 }
 .fonts__smallText__2CJgk {
   font-family: 'Roboto Condensed', sans-serif;
-  font-weight: normal;
-  line-height: 1;
+  font-weight: lighter;
+  line-height: 15px;
   letter-spacing: 0.1em;
   font-size: .7em;
 }
@@ -1210,7 +1210,7 @@ p {
   transition-duration: .2s, 0s;
   display: none;
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 48rem) {
   .modal-styles__overlay__1JLCt {
     display: block;
     background-color: #0a1821;
@@ -1230,8 +1230,9 @@ p {
   height: 100vh;
   margin-right: 0rem !important;
   margin-left: 0rem !important;
+  overflow-y: scroll;
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 48rem) {
   .modal-styles__container__2Bo4V {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1275,7 +1276,7 @@ p {
   overflow-y: scroll;
   height: 100%;
 }
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 48rem) {
   .modal-styles__modalInset__153dj {
     box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -1641,6 +1642,7 @@ p {
   background-color: inherit;
   padding: 16px 24px;
   border-radius: 0 0 2px 2px;
+  z-index: 100;
 }
 .projectsCard-styles__cardAction__1wE6j a {
   color: #0a1821;
@@ -2045,6 +2047,27 @@ p {
 .nav-styles__blog__jymdc:after {
   content: 'Blog';
 }
+.nav-styles__enter__2uJmI {
+  opacity: 0.01;
+  transition: opacity 0.5s ease-in;
+}
+.nav-styles__enter__2uJmI.nav-styles__enterActive__3yr7n {
+  opacity: 1;
+}
+.nav-styles__leave__1C3_3 {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+.nav-styles__leave__1C3_3.nav-styles__leaveActive__3mpOH {
+  opacity: 0.01;
+}
+.nav-styles__appear__tJEX4 {
+  opacity: 0.01;
+}
+.nav-styles__appear__tJEX4.nav-styles__appearActive__2c7Pg {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
 /* Palette URL: http://paletton.com/#uid=63v0u0kw0w0jyC+oRxVy4oIDfjr */
 /* Feel free to copy&paste color codes to your application */
 /* MIXINS */
@@ -2143,26 +2166,5 @@ p {
             align-items: center;
   }
 }
-.header-styles__enter__5XXUt {
-  opacity: 0.01;
-  transition: opacity 0.5s ease-in;
-}
-.header-styles__enter__5XXUt.header-styles__enterActive__3aI3H {
-  opacity: 1;
-}
-.header-styles__leave__2GWbQ {
-  opacity: 1;
-  transition: opacity 0.5s ease-in;
-}
-.header-styles__leave__2GWbQ.header-styles__leaveActive__3sngU {
-  opacity: 0.01;
-}
-.header-styles__appear__2GT8a {
-  opacity: 0.01;
-}
-.header-styles__appear__2GT8a.header-styles__appearActive__1Jh6t {
-  opacity: 1;
-  transition: opacity 0.5s ease-in;
-}
 
-/*# sourceMappingURL=main.309fc73a3d4dafb31865f32c9fd98690.css.map*/
+/*# sourceMappingURL=main.b414e62caeaf356597f0a7565a92a5e3.css.map*/

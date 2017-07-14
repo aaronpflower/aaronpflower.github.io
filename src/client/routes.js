@@ -15,11 +15,13 @@ import Portfolio from './containers/portfolio.container'
 import Blog from './containers/blog.container'
 import Header from './containers/header.container'
 
+const supportsHistory = 'pushState' in window.history
+
 let store = configureStore()
 
 const Routes = () => (
   <Provider store={store}>
-    <Router>
+    <Router basename={'/'} forceRefresh={!supportsHistory}>
       <div className={classnames(grid.row, styles.mainWrapper)}>
         <div className={classnames(grid.colXs10, grid.colMd8, styles.content)}>
           <Header/>

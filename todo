@@ -1,10 +1,10 @@
 * Currently
 - Modals won't load if given url with params
+- site won't load sub pages without going through /
 
 * High
 - new images with screen shot tool in dev tools chrome
 - Resize images
-- site won't load sub pages without going through /
 
 * Medium
 - minify css
