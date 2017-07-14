@@ -21,7 +21,6 @@ class Header extends Component {
   }
 
   toggleMenu() {
-    console.log('here')
     if(this.state.navOpen === false) {
       this.setState({
         navOpen: true
@@ -34,17 +33,6 @@ class Header extends Component {
   }
 
   render() {
-    // let nav = null
-    //
-    // if (this.state.navOpen && window.innerWidth < 1024) {
-    //   nav = <Nav />
-    // }
-    // else if (!this.state.navOpen && window.innerWidth < 1024) {
-    //   nav = null
-    // }
-    // else if (window.innerWidth > 1024) {
-    //   nav = <Nav />
-    // }
 
     return (
       <header className={classnames(!this.props.store.loader.loaded && styles.loading, styles.header)}>

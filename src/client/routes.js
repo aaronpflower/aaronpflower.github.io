@@ -5,7 +5,7 @@ import classnames from 'classnames'
 
 import React from 'react'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, HashRouter, Route, Link } from 'react-router-dom'
 
 import configureStore from './store/configureStore'
 
@@ -21,7 +21,7 @@ let store = configureStore()
 
 const Routes = () => (
   <Provider store={store}>
-    <Router basename={'/'} forceRefresh={!supportsHistory}>
+    <HashRouter basename={'/'} forceRefresh={!supportsHistory}>
       <div className={classnames(grid.row, styles.mainWrapper)}>
         <div className={classnames(grid.colXs10, grid.colMd8, styles.content)}>
           <Header/>
@@ -42,7 +42,7 @@ const Routes = () => (
           </div>
         </div>
       </div>
-    </Router>
+    </HashRouter>
   </Provider>
 )
 

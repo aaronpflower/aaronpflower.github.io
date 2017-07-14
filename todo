@@ -1,6 +1,5 @@
 * Currently
 - Modals won't load if given url with params
-- site won't load sub pages without going through /
 
 * High
 - new images with screen shot tool in dev tools chrome
@@ -13,6 +12,7 @@
 - Img component using aspect ratio mixin as a prop
 - Figure out how not to use setInnerHTML with react and blogger
 - blog reader make like project modal
+- Make isomorphic app https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writting-manually
 
 * Low
 - Tablet size screen UI/UX
