@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import classnames from 'classnames'
 
 import { CSSTransitionGroup } from 'react-transition-group'
-import icons from 'font-awesome/css/font-awesome.css'
+import icons from 'font-awesome/css/font-awesome.min.css'
 import styles from './nav.styles.less'
 
 function nav (props) {

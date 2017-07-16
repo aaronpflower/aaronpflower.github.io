@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 import styles from './blogReader.styles.less'
 import fonts from '../../base/fonts.less'
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
-import icons from 'font-awesome/css/font-awesome.css'
+import icons from 'font-awesome/css/font-awesome.min.css'
 
 class BlogReader extends Component {
   constructor(props) {

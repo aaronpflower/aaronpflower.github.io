@@ -1,6 +1,6 @@
-import 'normalize.css';
+// import './normalize.css';
 import styles from './main.less'
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
 
 import React from 'react'

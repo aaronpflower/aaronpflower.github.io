@@ -5,7 +5,7 @@ import styles from './projectsCard.styles.less'
 import fonts from '../../base/fonts.less'
 import classnames from 'classnames'
 
-import icons from 'font-awesome/css/font-awesome.css'
+import icons from 'font-awesome/css/font-awesome.min.css'
 
 import TriColoredBars from '../triColoredBars/triColoredBars.component'
 

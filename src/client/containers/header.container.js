@@ -6,9 +6,9 @@ import mapStateToProps from '../utils/mapStateToProps'
 
 import Nav from '../components/nav/nav.component'
 
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
-import icons from 'font-awesome/css/font-awesome.css'
+import icons from 'font-awesome/css/font-awesome.min.css'
 import styles from './header.styles.less'
 
 class Header extends Component {
