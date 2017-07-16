@@ -2,10 +2,10 @@ import React from 'react'
 import { portfolioData } from '../../data'
 
 import styles from './modal.styles.less'
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
 import fonts from '../../base/fonts.less'
-import icons from 'font-awesome/css/font-awesome.css'
+import icons from 'font-awesome/css/font-awesome.min.css'
 
 
 import Slider from '../slider/slider.component'

@@ -4,7 +4,7 @@ import { aboutData } from '../data'
 
 import styles from './about.styles.less'
 import classnames from 'classnames'
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import { CSSTransitionGroup } from 'react-transition-group'
 import fonts from '../base/fonts.less'
 

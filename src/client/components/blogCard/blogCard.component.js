@@ -6,7 +6,7 @@ import styles from './blogCard.styles.less'
 import fonts from '../../base/fonts.less'
 import classnames from 'classnames'
 import moment from 'moment'
-import icons from 'font-awesome/css/font-awesome.css'
+import icons from 'font-awesome/css/font-awesome.min.css'
 
 function BlogCard(props) {
     let date = moment(props.date).format('L');

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './projectsList.styles.less'
 import classnames from 'classnames'
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import fonts from '../../base/fonts.less'
 import { portfolioData } from '../../data'
 

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { BrowserRouter as Router, HashRouter, Switch, Route, Link } from 'react-router-dom'
 
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
 import styles from './portfolio.styles.less'
 import fonts from '../base/fonts.less'

@@ -8,8 +8,9 @@ import { setLoader } from '../actions/actions'
 
 import { CSSTransitionGroup } from 'react-transition-group'
 import classnames from 'classnames'
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import styles from './home.styles.less'
+import icons from 'font-awesome/css/font-awesome.min.css'
 import fonts from '../base/fonts.less'
 
 import Typer from '../components/typer/typer.component';
@@ -65,7 +66,7 @@ class Home extends Component {
       computer = null
       button = null
     } else {
-      button = <button className={styles.btn} onClick={this.skipIntro}>Skip Intro</button>
+      button = <p className={classnames(styles.skipWrapper, fonts.smallText)} onClick={this.skipIntro}>Skip Intro<span className={classnames(styles.skip, icons.fa, icons.faArrowRight)}></span></p>
       computer = <Computer />
       content = this.state.typersData.slice(index, index+1).map((item, i) => {
         return <Typer onTypingEnd={this.onTypingEnd} key={index} data={item.data}/>;

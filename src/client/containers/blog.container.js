@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import styles from './blog.styles.less'
 import fonts from '../base/fonts.less'
-import grid from 'flexboxgrid'
+import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
 
 import BlogList from '../components/blogList/blogList.component'
