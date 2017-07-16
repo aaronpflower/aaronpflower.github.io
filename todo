@@ -1,14 +1,14 @@
 * Currently
-- Modals won't load if given url with params
+- Add Unit tests
 
 * High
 - new images with screen shot tool in dev tools chrome
 - Resize images
-
-* Medium
+- Modals won't load if given url with params
 - minify css
 - Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
-- Add Unit tests
+
+* Medium
 - Img component using aspect ratio mixin as a prop
 - Figure out how not to use setInnerHTML with react and blogger
 - blog reader make like project modal

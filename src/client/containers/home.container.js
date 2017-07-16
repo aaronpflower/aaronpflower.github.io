@@ -28,6 +28,7 @@ class Home extends Component {
     }
     this.onTypingEnd = this.onTypingEnd.bind(this)
     this.handleInitalLoad = this.handleInitalLoad.bind(this)
+    this.skipIntro = this.skipIntro.bind(this)
   }
 
   handleInitalLoad() {
@@ -49,18 +50,22 @@ class Home extends Component {
     }
   }
 
+  skipIntro() {
+    this.props.dispatch(setLoader())
+  }
+
   render() {
     let index = this.state.index
     let content
-    let headline
     let computer
+    let button
 
     if (Math.abs(this.state.index) === this.state.typersData.length || this.props.store.loader.loaded === true) {
       content = <HomeMain />
-      headline = null
       computer = null
+      button = null
     } else {
-      headline = <Loading />
+      button = <button className={styles.btn} onClick={this.skipIntro}>Skip Intro</button>
       computer = <Computer />
       content = this.state.typersData.slice(index, index+1).map((item, i) => {
         return <Typer onTypingEnd={this.onTypingEnd} key={index} data={item.data}/>;
@@ -74,10 +79,10 @@ class Home extends Component {
             transitionName={styles}
             transitionEnterTimeout={1000}
             transitionLeaveTimeout={500}>
-            {headline}
             {computer}
             {content}
           </CSSTransitionGroup>
+          {button}
         </div>
       </div>
     )
