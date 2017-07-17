@@ -2,6 +2,7 @@
 // https://developers.google.com/blogger/docs/3.0/getting_started
 require("dotenv").config();
 
+const compression = require('compression')
 const bodyParser = require("body-parser")
 const path = require('path')
 const express = require('express')
@@ -16,11 +17,11 @@ const helmet = require('helmet')
 const port = process.env.PORT || 3000
 const env = process.env.NODE_ENV || 'development'
 
+app.use(compression())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.raw());
 app.use(bodyParser.text());
-
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(helmet())
 app.use(favicon(__dirname + '/favicon.ico'));

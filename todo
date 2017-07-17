@@ -1,11 +1,10 @@
 * Currently
-- add normalize
+- Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
 
 * High
-- no brainer that I want to get better, what makes me unique?
+- no brainer that I want to get better, what makes me unique? For about page last item.
 - Add Unit tests
 - Modals won't load if given url with params
-- Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
 
 * Medium
 - Img component using aspect ratio mixin as a prop
