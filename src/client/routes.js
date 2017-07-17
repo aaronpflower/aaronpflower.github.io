@@ -1,3 +1,4 @@
+import 'normalize.css';
 import styles from './main.less'
 import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
