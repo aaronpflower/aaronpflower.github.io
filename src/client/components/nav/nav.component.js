@@ -7,6 +7,7 @@ import icons from 'font-awesome/css/font-awesome.min.css'
 import styles from './nav.styles.less'
 
 function nav (props) {
+  // Todo maybe put this in componentWillMount? https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/birth/premounting_with_componentwillmount.html
   let nav
   if (props.navOpen && window.innerWidth < 1024) {
     nav = (

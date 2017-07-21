@@ -19,6 +19,7 @@ const Modal = ({ match, history }) => {
     e.stopPropagation()
     history.goBack()
   }
+
   return (
     <div>
       <div className={classnames(grid.row, styles.container)}>
