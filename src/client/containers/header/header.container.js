@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import mapStateToProps from '../utils/mapStateToProps'
+import mapStateToProps from '../../utils/mapStateToProps'
 
-import Nav from '../components/nav/nav.component'
+import Nav from '../../components/nav/nav.component'
 
 import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'

@@ -9,11 +9,11 @@ import { BrowserRouter as Router, HashRouter, Route, Link } from 'react-router-d
 
 import configureStore from './store/configureStore'
 
-import Home from './containers/home.container'
-import About from './containers/about.container'
-import Portfolio from './containers/portfolio.container'
-import Blog from './containers/blog.container'
-import Header from './containers/header.container'
+import Home from './containers/home/home.container'
+import About from './containers/about/about.container'
+import Portfolio from './containers/portfolio/portfolio.container'
+import Blog from './containers/blog/blog.container'
+import Header from './containers/header/header.container'
 import BgLines from './components/bgLines/bgLines.component'
 
 const supportsHistory = 'pushState' in window.history

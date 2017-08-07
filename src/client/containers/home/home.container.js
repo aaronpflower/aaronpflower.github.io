@@ -1,22 +1,22 @@
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
-import { typersData } from '../data'
+import { typersData } from '../../data'
 
-import mapStateToProps from '../utils/mapStateToProps'
-import { setLoader } from '../actions/actions'
+import mapStateToProps from '../../utils/mapStateToProps'
+import { setLoader } from '../../actions/actions'
 
 import { CSSTransitionGroup } from 'react-transition-group'
 import classnames from 'classnames'
 import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import styles from './home.styles.less'
 import icons from 'font-awesome/css/font-awesome.min.css'
-import fonts from '../base/fonts.less'
+import fonts from '../../base/fonts.less'
 
-import Typer from '../components/typer/typer.component';
-import Computer from '../components/computer/computer.component'
-import HomeMain from '../components/homeMain/home.main'
-import Loading from '../components/loader/loading.component'
+import Typer from '../../components/typer/typer.component';
+import Computer from '../../components/computer/computer.component'
+import HomeMain from '../../components/homeMain/home.main'
+import Loading from '../../components/loader/loading.component'
 
 
 class Home extends Component {

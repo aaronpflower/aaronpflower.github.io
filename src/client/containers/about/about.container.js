@@ -1,21 +1,21 @@
 import React, { Component, PropTypes } from 'react'
 import ReactDom from 'react-dom'
-import { aboutData } from '../data'
+import { aboutData } from '../../data'
 
 import styles from './about.styles.less'
 import classnames from 'classnames'
 import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import { CSSTransitionGroup } from 'react-transition-group'
-import fonts from '../base/fonts.less'
+import fonts from '../../base/fonts.less'
 
 import { connect } from 'react-redux'
-import mapStateToProps from '../utils/mapStateToProps'
-import { setLoader } from '../actions/actions'
+import mapStateToProps from '../../utils/mapStateToProps'
+import { setLoader } from '../../actions/actions'
 
-import PageHeadline from '../components/pageHeadline/pageHeadline.component'
-import TriColoredBars from '../components/triColoredBars/triColoredBars.component'
+import PageHeadline from '../../components/pageHeadline/pageHeadline.component'
+import TriColoredBars from '../../components/triColoredBars/triColoredBars.component'
 
-class About extends Component {
+export class About extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -24,11 +24,13 @@ class About extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
       this.setState({
         inView: true
       })
-      this.props.dispatch(setLoader())
+      if(this.props.dispatch) {
+        this.props.dispatch(setLoader())
+      }
   }
 
   render() {

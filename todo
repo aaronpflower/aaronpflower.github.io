@@ -1,7 +1,10 @@
 * Currently
-- Add Unit tests
+- Add Unit tests (Mocha and Enzyme)
+- Seperate components from containers more
+
 
 * High
+- create index.js for components to import easier
 - no brainer that I want to get better, what makes me unique? For about page last item.
 - Modals won't load if given url with params
 
