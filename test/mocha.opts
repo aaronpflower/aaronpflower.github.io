@@ -1,1 +1,4 @@
-test/**/*.js
+--require ./test/test.setup.js
+
+--recursive src/**/*.test.js
+--compilers js:babel-core/register

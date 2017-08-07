@@ -9,11 +9,12 @@ import { BrowserRouter as Router, HashRouter, Route, Link } from 'react-router-d
 
 import configureStore from './store/configureStore'
 
-import Home from './containers/home.container'
-import About from './containers/about.container'
-import Portfolio from './containers/portfolio.container'
-import Blog from './containers/blog.container'
-import Header from './containers/header.container'
+import Home from './containers/home/home.container'
+import About from './containers/about/about.container'
+import Portfolio from './containers/portfolio/portfolio.container'
+import Blog from './containers/blog/blog.container'
+import Header from './containers/header/header.container'
+import BgLines from './components/bgLines/bgLines.component'
 
 const supportsHistory = 'pushState' in window.history
 
@@ -30,17 +31,7 @@ const Routes = () => (
           <Route path="/portfolio" component={Portfolio}/>
           <Route path="/blog" component={Blog}/>
         </div>
-        <div className={classnames(grid.colXs10, grid.colMd12, styles.lines)}>
-          <div className={classnames(grid.row, grid.betweenXs, styles.lineRow)}>
-            <div className={styles.line}></div>
-            <div className={styles.line}></div>
-            <div className={styles.line}></div>
-            <div className={styles.line}></div>
-            <div className={styles.line}></div>
-            <div className={styles.line}></div>
-            <div className={styles.line}></div>
-          </div>
-        </div>
+        <BgLines />
       </div>
     </HashRouter>
   </Provider>

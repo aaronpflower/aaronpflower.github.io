@@ -9,7 +9,6 @@ const express = require('express')
 const app = express()
 const favicon = require('serve-favicon');
 
-const request = require('request-promise')
 const helmet = require('helmet')
 // const client = require('redis').createClient(process.env.REDIS_URL)
 // const limiter = require('express-limiter')(app, client)
@@ -36,26 +35,7 @@ const limiterOptions = {
 	}
 }
 
-app.get('/', function(req, res) {
-	res.sendFile(path.join(__dirname, 'dist'))
-});
-
-app.get('/api/v1/posts', function(req, res) {
-	var options = {
-		url: 'https://www.googleapis.com/blogger/v3/blogs/' + process.env.BLOG_ID + '/posts?key=' + process.env.BLOG_API_KEY + '&fetchImages=true',
-		method: 'GET',
-		json: true
-	}
-	request(options)
-		.then(response => {
-			res.status(200).json(response.items)
-		})
-		.catch(err => {
-			res.status(500).json({
-					status: 'error'
-			})
-		})
-})
+require('./src/server/routes')(app)
 
 app.listen(port, () => {
 	if(env === 'development'){

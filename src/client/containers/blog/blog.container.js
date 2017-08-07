@@ -2,17 +2,17 @@ import React, { Component, PropTypes } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import styles from './blog.styles.less'
-import fonts from '../base/fonts.less'
+import fonts from '../../base/fonts.less'
 import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
 
-import BlogList from '../components/blogList/blogList.component'
-import BlogReader from '../components/blogReader/blogReader.component'
-import PageHeadline from '../components/pageHeadline/pageHeadline.component'
+import BlogList from '../../components/blogList/blogList.component'
+import BlogReader from '../../components/blogReader/blogReader.component'
+import PageHeadline from '../../components/pageHeadline/pageHeadline.component'
 
 import { connect } from 'react-redux'
-import mapStateToProps from '../utils/mapStateToProps'
-import { setLoader, getPosts, setCurrentPost } from '../actions/actions'
+import mapStateToProps from '../../utils/mapStateToProps'
+import { setLoader, getPosts, setCurrentPost } from '../../actions/actions'
 
 class BlogContainer extends Component {
   constructor(props) {

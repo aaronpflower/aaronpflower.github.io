@@ -4,14 +4,14 @@ import { BrowserRouter as Router, HashRouter, Switch, Route, Link } from 'react-
 import grid from 'flexboxgrid/css/flexboxgrid.min.css'
 import classnames from 'classnames'
 import styles from './portfolio.styles.less'
-import fonts from '../base/fonts.less'
+import fonts from '../../base/fonts.less'
 
 import { connect } from 'react-redux'
-import mapStateToProps from '../utils/mapStateToProps'
-import { setLoader } from '../actions/actions'
+import mapStateToProps from '../../utils/mapStateToProps'
+import { setLoader } from '../../actions/actions'
 
-import Modal from '../components/modal/modal.component'
-import ProjectsList from '../components/projectsList/projectsList.component'
+import Modal from '../../components/modal/modal.component'
+import ProjectsList from '../../components/projectsList/projectsList.component'
 
 class PortfolioContainer extends Component {
   constructor(props) {

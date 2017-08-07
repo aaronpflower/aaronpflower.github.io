@@ -1,9 +1,11 @@
 * Currently
-- Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
+- Add Unit tests (Mocha and Enzyme)
+- Seperate components from containers more
+
 
 * High
+- create index.js for components to import easier
 - no brainer that I want to get better, what makes me unique? For about page last item.
-- Add Unit tests
 - Modals won't load if given url with params
 
 * Medium
@@ -11,6 +13,8 @@
 - Figure out how not to use setInnerHTML with react and blogger
 - blog reader make like project modal
 - Make isomorphic app https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writting-manually
+- add swipe touch event on mobile for images
+- Put site through performance test https://blog.logrocket.com/make-react-fast-again-part-1-performance-timeline-f7f39f676f58
 
 * Low
 - Tablet size screen UI/UX
@@ -26,3 +30,4 @@
 - Add contact form
 - Add sorting logic to blog
 - Add redis to cache blog posts
+- change intro to push and pop calls off callstack
